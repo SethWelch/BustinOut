@@ -206,9 +206,9 @@ namespace BustinOutMegaMan
             {
                 if (BustinOutGame.megaman.Position.X < position.X)
                 {
-                    if (b.Position.X > position.X)
+                    if (b.Position.X > position.X - aliveAnimation.spriteWidth)
                     {
-                        if (b.Position.Y < position.Y)
+                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - 64)
                         {
                             bullets.RemoveAt(bullets.IndexOf(b));
                             isAlive = false;
@@ -220,7 +220,7 @@ namespace BustinOutMegaMan
                 {
                     if (b.Position.X < position.X)
                     {
-                        if (b.Position.Y < position.Y)
+                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - aliveAnimation.spriteHeight)
                         {
                             bullets.RemoveAt(bullets.IndexOf(b));
                             isAlive = false;
