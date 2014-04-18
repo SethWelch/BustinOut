@@ -53,7 +53,7 @@ namespace BustinOutMegaMan
         Controls control = new Controls();
         Sounds sound = new Sounds();
         Pause pause = new Pause();
-        PongGame game = new PongGame();
+        static PongGame game = new PongGame();
         Enemies enemies = new Enemies();
         Frogger frog = new Frogger();
         Graphics grph = new Graphics();
@@ -61,7 +61,7 @@ namespace BustinOutMegaMan
         PlayerControls ctrl = new PlayerControls();
 
 
-        public List<Projectiles> LiveProjectiles;
+        public static List<Projectiles> LiveProjectiles;
         public Texture2D Bullet;
         private SpriteFont hudFont;
 
@@ -97,7 +97,7 @@ namespace BustinOutMegaMan
 
         protected override void LoadContent()
         {
-            //Different menu screens
+            //Load Content for all of the different screens
             titleScreen.LoadContent(Content);
             hallOfFame.LoadContent(Content);
             optScn.LoadContent(Content);
@@ -128,6 +128,7 @@ namespace BustinOutMegaMan
             ui = Content.Load<Texture2D>("Images/UI Overlay");
             megaman = new AnimatedSprite(megamanTexture, 0, 60, 50);
 
+            //create the levels
             board1 = new Board(1, spriteBatch, tileTexture1, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, 212, 20);
             board2 = new Board(2, spriteBatch, tileTexture2, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, 212, 20);
             debugFont = Content.Load<SpriteFont>("debugFont");
@@ -146,7 +147,7 @@ namespace BustinOutMegaMan
             mb4 = Content.Load<Texture2D>("Images/Backgrounds/mboss");
             black = Content.Load<Texture2D>("Images/Backgrounds/background");
 
-            //Backgrounds
+            //Set background for level
             if (level == 1)
             {
                 Board.CurrentBoard = board1;
@@ -179,7 +180,7 @@ namespace BustinOutMegaMan
                 else debugBool = true;
             }
 
-            if (ctrl.resetGame()) { RestartGame(); }
+            if (ctrl.resetGame()) { RestartGame(0); }
 
             if (ctrl.levelChange())
             {
@@ -200,12 +201,24 @@ namespace BustinOutMegaMan
             }
         }
 
-        public static void RestartGame()
+        public static void RestartGame(int from)
         {
-            Board.CurrentBoard.CreateNewBoard();
-            PutmegamanInBottomLeftCorner();
+            if (from == 0)
+            {
+                Board.CurrentBoard.CreateNewBoard();
+                PutmegamanInBottomLeftCorner();
+                screenChange = true;
+            }
+            else if (from == 1)
+            {
+                game.Reset();
+            }
+            else
+            {
+
+            }
+
             timeRemaining = TimeSpan.FromMinutes(20.0);
-            screenChange = true;
         }
 
         private static void PutmegamanInBottomLeftCorner()
@@ -288,6 +301,7 @@ namespace BustinOutMegaMan
                         base.Draw(gameTime);
                         spriteBatch.Draw(getBG(), new Vector2(0, 160), Color.White);
 
+                        //draw the correct boards
                         if (level == 1)
                         {
                             board1.Draw();
@@ -484,11 +498,6 @@ namespace BustinOutMegaMan
 
                         enemies.Update(gameTime, bgNum, LiveProjectiles);
 
-                        //pause the game
-                        if (ctrl.Pause())
-                        {
-                            BustinOutGame.setState(7, 0);
-                        }
                         break;
                     }
             }
@@ -610,6 +619,14 @@ namespace BustinOutMegaMan
         public static void setLevel(int lvl)
         {
             level = lvl;
+        }
+
+        public static void clearBullets()
+        {
+            foreach (Projectiles p in LiveProjectiles.ToArray())
+            {
+                LiveProjectiles.Clear();
+            }
         }
     }
 }

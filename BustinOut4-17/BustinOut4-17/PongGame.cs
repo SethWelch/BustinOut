@@ -19,7 +19,7 @@ namespace BustinOutMegaMan
         Ball ball;
         Paddle playerone, playertwo;
         Rectangle playerrectangle, computerrectangle, ballrectangle;
-        int posSpeed = 16, negSpeed = -16, ballSpeed = 17, p1Score = 0, p2Score = 0, direction = 1, height, width;
+        int posSpeed = 16, negSpeed = -16, posPaddleSpeed = 16, negPaddleSpeed = -16, ballSpeed = 17, p1Score = 0, p2Score = 0, direction = 1, height, width;
         Point start = new Point(800, 450);
         String p1 = "MegaMan", p2 = "Bowser", time = "20:00";
         SpriteFont font, font2;
@@ -27,9 +27,6 @@ namespace BustinOutMegaMan
         SoundEffect blip;
 
         PlayerControls ctrl = new PlayerControls();
-
-
-        //public static TimeSpan timeRemaining = BustinOutGame.timeRemaining;
 
         public void LoadContent(ContentManager Content)
         {
@@ -61,16 +58,14 @@ namespace BustinOutMegaMan
         {
             ctrl.setStates();
 
-            //decrement remaining time
-            //timeRemaining -= gameTime.ElapsedGameTime;
-
+            //Controls
             if (ctrl.moveUp())
             {
-                playerone.ySpeed = negSpeed;
+                playerone.ySpeed = negPaddleSpeed;
             }
             else if (ctrl.moveDown())
             {
-                playerone.ySpeed = posSpeed;
+                playerone.ySpeed = posPaddleSpeed;
             }
             else
             {
@@ -92,30 +87,32 @@ namespace BustinOutMegaMan
             ballrectangle.Y = (int)ball.Position.Y;
             ball.UpdateBall();
 
+            //Computer scores a point
             if (ball.Position.X <= -100)
             {
-                ball.Position = start;
-                ball.xSpeed = posSpeed;
+                speedReset();
                 p2Score++;
                 direction = 0;
             }
+            //Player scores a point
             else if (ball.Position.X + ball1.Width >= width - 5)
             {
-                ball.Position = start;
-                ball.xSpeed = negSpeed;
+                speedReset();
                 p1Score++;
                 direction = 1;
             }
+            //ball hits bottom wall
             if (ball.Position.Y + ball1.Height > height)
             {
                 ball.ySpeed *= -1;
             }
+            //ball hits top wall
             else if (ball.Position.Y < 0)
             {
                 ball.ySpeed *= -1;
             }
 
-
+            //Stop player from going through top or bottom
             if (playerone.Position.Y < 0)
             {
                 playerone.Position.Y = 0;
@@ -124,29 +121,8 @@ namespace BustinOutMegaMan
             {
                 playerone.Position.Y = height - paddle.Height;
             }
-            if (ballrectangle.Intersects(playerrectangle))
-            {
-                ball.Position.X = playerrectangle.Right;
-                ball.xSpeed *= -1;
-                direction = 0;
-                blip.Play();
-            }
-            else if (ballrectangle.Intersects(computerrectangle))
-            {
-                ball.Position.X = computerrectangle.Left - ball1.Width;
-                ball.xSpeed *= -1;
-                direction = 1;
-                blip.Play();
-            }
-            if (ball.Position.Y + ball1.Height / 2 > playertwo.Position.Y + paddle.Height / 2)
-            {
-                playertwo.ySpeed = posSpeed;
-            }
-            else if (ball.Position.Y + ball1.Height / 2 < playertwo.Position.Y + paddle.Height / 2)
-            {
-                playertwo.ySpeed = negSpeed;
-            }
 
+            //Stop computer from going through top or bottom
             if (playertwo.Position.Y < 0)
             {
                 playertwo.Position.Y = 0;
@@ -155,8 +131,37 @@ namespace BustinOutMegaMan
             {
                 playertwo.Position.Y = height - paddle.Height;
             }
-        }
 
+            //ball hits a paddle
+            if (ballrectangle.Intersects(playerrectangle))
+            {
+                ball.Position.X = playerrectangle.Right;
+                ball.xSpeed++;
+                ball.ySpeed++;
+                ball.xSpeed *= -1;
+                direction = 0;
+                blip.Play();
+            }
+            else if (ballrectangle.Intersects(computerrectangle))
+            {
+                ball.Position.X = computerrectangle.Left - ball1.Width;
+                ball.xSpeed++;
+                ball.ySpeed++;
+                ball.xSpeed *= -1;
+                direction = 1;
+                blip.Play();
+            }
+
+            //The AI for the computer (just tries to match the ball)
+            if (ball.Position.Y + ball1.Height / 2 > playertwo.Position.Y + paddle.Height / 2)
+            {
+                playertwo.ySpeed = posPaddleSpeed;
+            }
+            else if (ball.Position.Y + ball1.Height / 2 < playertwo.Position.Y + paddle.Height / 2)
+            {
+                playertwo.ySpeed = negPaddleSpeed;
+            }
+        }
 
         public void Draw(SpriteBatch spriteBatch, TimeSpan timeRemaining)
         {
@@ -179,6 +184,42 @@ namespace BustinOutMegaMan
                 spriteBatch.Draw(ball2, new Vector2(ball.Position.X, ball.Position.Y), Color.White);
 
             spriteBatch.Draw(paddle, playertwo.Position, Color.White);
+        }
+
+        //randomly chooses which direction the ball will go by changing the speed
+        public int Speed()
+        {
+            Random rand = new Random();
+
+            int random = rand.Next(0, 100);
+
+            if (random <= 50)
+            {
+                return negSpeed;
+            }
+            else
+            {
+                return posSpeed;
+            }
+        }
+
+        public void speedReset()
+        {
+            ball.Position = start;
+            ball.xSpeed = 17;
+            ball.ySpeed = 17;
+            ball.xSpeed = Speed();
+        }
+
+        //reset the game
+        public void Reset()
+        {
+            playerone = new Paddle(new Vector2(20, height / 2));
+            playertwo = new Paddle(new Vector2(1500, height / 2));
+            ball.Position = start;
+            ball.xSpeed = Speed();
+            p1Score = 0;
+            p2Score = 0;
         }
     }
 }

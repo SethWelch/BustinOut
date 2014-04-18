@@ -151,6 +151,11 @@ namespace BustinOutMegaMan
                 }
             }
 
+            //pause the game
+            if (ctrl.Pause())
+            {
+                BustinOutGame.setState(7, 0);
+            }
 
             // If shooting key is held down then he'll stay in the shooting frame
             if (shooting)
@@ -362,6 +367,8 @@ namespace BustinOutMegaMan
         {
             if (Position.Y > pitDepth)
             {
+                BustinOutGame.clearBullets();
+
                 currentFrame = 16;
 
                 deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
@@ -372,7 +379,6 @@ namespace BustinOutMegaMan
 
                     deathTimer = 0f;
                 }
-                //Position = new Vector2(startX, startY); //655);
             }
 
             if (Position.Y > 850)

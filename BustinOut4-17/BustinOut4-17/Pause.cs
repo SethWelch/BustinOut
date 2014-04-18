@@ -91,15 +91,20 @@ namespace BustinOutMegaMan
                     BustinOutGame.setState(3, 0);
                     Options.FromTitle = 1;
                 }
-                else if (option == 2)
+                else if (option == 2 && whereFrom == 0)
                 {
-                    BustinOutGame.RestartGame();
+                    BustinOutGame.RestartGame(whereFrom);
                     BustinOutGame.setState(4, 0);
                     BustinOutGame.setLevel(1);
                 }
+                else if (option == 2 && whereFrom == 1)
+                {
+                    BustinOutGame.RestartGame(whereFrom);
+                    BustinOutGame.setState(8, 0); 
+                }
                 else if (option == 3)
                 {
-                    BustinOutGame.RestartGame();
+                    BustinOutGame.RestartGame(whereFrom);
                     BustinOutGame.setState(1, 0);
                     BustinOutGame.setLevel(0);
                 }
