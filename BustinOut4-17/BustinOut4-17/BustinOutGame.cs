@@ -29,7 +29,7 @@ namespace BustinOutMegaMan
         private Board board1, board2;
         private Random rnd = new Random();
         private SpriteFont debugFont;
-        private static int bgNum = 0, yCorrect = 165, level = 1, height = 900, width = 1600;
+        private static int bgNum = 0, yCorrect = 165, level = 1, height = 900, width = 1600, currentGameState = 0;
         private bool debugBool = false;
         private KeyboardState currentState, previousState;
         private static String timeString;
@@ -46,6 +46,10 @@ namespace BustinOutMegaMan
             set { width = value; }
         }
 
+        public static int gameState
+        {
+            get { return currentGameState; }
+        }
 
         Title titleScreen = new Title();
         Options optScn = new Options();
@@ -439,7 +443,11 @@ namespace BustinOutMegaMan
                         //decrement remaining time
                         timeRemaining -= gameTime.ElapsedGameTime;
 
-                        Pause.from = 1;
+                        if (ctrl.Pause())
+                        {
+                            Pause.from = 1;
+                            BustinOutGame.setState(7, 0);
+                        }
 
                         break;
                     }
@@ -450,7 +458,11 @@ namespace BustinOutMegaMan
                         //decrement remaining time
                         timeRemaining -= gameTime.ElapsedGameTime;
 
-                        Pause.from = 2;
+                        if (ctrl.Pause())
+                        {
+                            Pause.from = 2;
+                            BustinOutGame.setState(7, 0);
+                        }
 
                         break;
                     }
@@ -458,7 +470,6 @@ namespace BustinOutMegaMan
                     {
                         //decrement remaining time
                         timeRemaining -= gameTime.ElapsedGameTime;
-                        Pause.from = 0;
 
                         if (AnimatedSprite.shooting == true)
                         {
@@ -494,6 +505,12 @@ namespace BustinOutMegaMan
                                 LiveProjectiles.Clear();
                                 screenChange = false;
                             }
+                        }
+
+                        if (ctrl.Pause())
+                        {
+                            Pause.from = 0;
+                            BustinOutGame.setState(7, 0);
                         }
 
                         enemies.Update(gameTime, bgNum, LiveProjectiles);
@@ -593,27 +610,60 @@ namespace BustinOutMegaMan
             }
 
             if (state == 1)
+            {
                 mCurrentState = GameState.Title;
+                currentGameState = 1;
+            }
             else if (state == 2)
+            {
                 mCurrentState = GameState.Hall;
+                currentGameState = 2;
+            }
             else if (state == 3)
+            {
                 mCurrentState = GameState.Options;
+                currentGameState = 3;
+            }
             else if (state == 4)
+            {
                 mCurrentState = GameState.Playing;
+                currentGameState = 4;
+            }
             else if (state == 5)
+            {
                 mCurrentState = GameState.Sounds;
+                currentGameState = 5;
+            }
             else if (state == 6)
+            {
                 mCurrentState = GameState.Controls;
+                currentGameState = 6;
+            }
             else if (state == 7)
+            {
                 mCurrentState = GameState.Pause;
+                currentGameState = 7;
+            }
             else if (state == 8)
+            {
                 mCurrentState = GameState.Pong;
+                currentGameState = 8;
+            }
             else if (state == 9)
+            {
                 mCurrentState = GameState.Frogger;
+                currentGameState = 9;
+            }
             else if (state == 10)
+            {
                 mCurrentState = GameState.MiniGames;
+                currentGameState = 10;
+            }
             else
+            {
                 mCurrentState = GameState.Graphics;
+                currentGameState = 11;
+            }
         }
 
         public static void setLevel(int lvl)

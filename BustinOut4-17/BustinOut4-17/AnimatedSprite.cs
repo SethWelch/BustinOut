@@ -151,12 +151,6 @@ namespace BustinOutMegaMan
                 }
             }
 
-            //pause the game
-            if (ctrl.Pause())
-            {
-                BustinOutGame.setState(7, 0);
-            }
-
             // If shooting key is held down then he'll stay in the shooting frame
             if (shooting)
             {

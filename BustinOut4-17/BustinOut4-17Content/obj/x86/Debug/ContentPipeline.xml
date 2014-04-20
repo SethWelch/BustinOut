@@ -8,7 +8,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\DebugFont.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.8935316-06:00</Time>
     </Item>
     <Item>
       <Source>Fonts\font.spritefont</Source>
@@ -17,7 +17,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\font.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.8955333-06:00</Time>
     </Item>
     <Item>
       <Source>Fonts\font2.spritefont</Source>
@@ -26,7 +26,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\font2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.8965343-06:00</Time>
     </Item>
     <Item>
       <Source>Fonts\HUD.spritefont</Source>
@@ -35,7 +35,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\HUD.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.8955333-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\background.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\background.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9025495-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\froggerBG.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\froggerBG.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9035518-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mb1.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb1.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9045516-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mb2.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9055526-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mb3.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb3.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.907483-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mboss.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mboss.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9084846-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PongBG.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PongBG.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.8975372-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBackground1.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground1.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.8985361-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBackground2.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9015479-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBackground3.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground3.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9025495-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBoss.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBoss.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9025495-06:00</Time>
     </Item>
     <Item>
       <Source>Images\blocked.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\blocked.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9472399-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowser.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowser.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9482413-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowser2.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowser2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9482413-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Enemy1A.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Enemy1A.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9084846-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Enemy1B.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Enemy1B.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9094854-06:00</Time>
     </Item>
     <Item>
       <Source>Images\explosion.png</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\explosion.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.949242-06:00</Time>
     </Item>
     <Item>
       <Source>Images\MegaManRun.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\MegaManRun.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9094854-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mega_man_pong.png</Source>
@@ -206,7 +206,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mega_man_pong.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9499122-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\buttonsInverted.png</Source>
@@ -215,7 +215,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\buttonsInverted.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9352282-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Controls Screen 2.png</Source>
@@ -224,7 +224,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Controls Screen 2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9114874-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Difficulty Select.png</Source>
@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Difficulty Select.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9124884-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Graphics.png</Source>
@@ -242,7 +242,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Graphics.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9124884-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Graphics2.png</Source>
@@ -251,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Graphics2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9144902-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Hall of fame.png</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Hall of fame.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9154915-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Mini Game.png</Source>
@@ -269,7 +269,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Mini Game.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9164926-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Options Menu.png</Source>
@@ -278,7 +278,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Options Menu.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.918494-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Pause.png</Source>
@@ -287,7 +287,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Pause.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9202137-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 2.png</Source>
@@ -296,7 +296,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9212156-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 3.png</Source>
@@ -305,7 +305,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 3.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9212156-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 4.png</Source>
@@ -314,7 +314,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 4.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9222164-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 5.png</Source>
@@ -323,7 +323,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 5.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9232168-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 6.png</Source>
@@ -332,7 +332,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 6.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9242184-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen.png</Source>
@@ -341,7 +341,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9252191-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Title Screen Quit Game.png</Source>
@@ -350,7 +350,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Title Screen Quit Game.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9282222-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Title Screen.png</Source>
@@ -359,7 +359,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Title Screen.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.931225-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\TitleScreen.png</Source>
@@ -368,7 +368,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\TitleScreen.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9342272-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mman.png</Source>
@@ -377,7 +377,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mman.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9499122-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mman2.png</Source>
@@ -386,7 +386,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mman2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9509142-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\arrow.png</Source>
@@ -395,7 +395,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\arrow.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9382313-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\arrow2.png</Source>
@@ -404,7 +404,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\arrow2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.939232-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\ball.png</Source>
@@ -413,7 +413,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\ball.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.939232-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\block.png</Source>
@@ -422,7 +422,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\block.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.939232-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\blocked.png</Source>
@@ -431,7 +431,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\blocked.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9402349-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\bullet.png</Source>
@@ -440,7 +440,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\bullet.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9402349-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\car1.png</Source>
@@ -449,7 +449,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\car1.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9412341-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\car2.png</Source>
@@ -458,7 +458,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\car2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9412341-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\fire.png</Source>
@@ -467,7 +467,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\fire.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9422354-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\fireball.png</Source>
@@ -476,7 +476,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\fireball.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9422354-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\lightning1.png</Source>
@@ -485,7 +485,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\lightning1.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9432358-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\lightning2.png</Source>
@@ -494,7 +494,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\lightning2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9432358-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\mario block.png</Source>
@@ -503,7 +503,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\mario block.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9442372-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\mblock.png</Source>
@@ -512,7 +512,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\mblock.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9442372-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Platform.png</Source>
@@ -521,7 +521,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Platform.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9352282-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Pong.png</Source>
@@ -530,7 +530,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Pong.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9362292-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\quarter.png</Source>
@@ -539,7 +539,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\quarter.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9442372-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Down.png</Source>
@@ -548,7 +548,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Down.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9362292-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Left.png</Source>
@@ -557,7 +557,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Left.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9372303-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Right.png</Source>
@@ -566,7 +566,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Right.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9372303-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Up.png</Source>
@@ -575,7 +575,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Up.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9382313-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\stairs.png</Source>
@@ -584,7 +584,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\stairs.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9452379-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck.png</Source>
@@ -593,7 +593,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9452379-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck2.png</Source>
@@ -602,7 +602,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck2.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9462389-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck3.png</Source>
@@ -611,7 +611,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck3.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9462389-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck4.png</Source>
@@ -620,7 +620,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck4.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9462389-06:00</Time>
     </Item>
     <Item>
       <Source>Images\truck.png</Source>
@@ -629,7 +629,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\truck.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9509142-06:00</Time>
     </Item>
     <Item>
       <Source>Images\UI Overlay.png</Source>
@@ -638,7 +638,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\UI Overlay.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9472399-06:00</Time>
     </Item>
     <Item>
       <Source>jumper.png</Source>
@@ -647,7 +647,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\jumper.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:46.0009579-06:00</Time>
     </Item>
     <Item>
       <Source>tile.png</Source>
@@ -656,7 +656,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\tile.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:46.0079654-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Mario.mp3</Source>
@@ -666,7 +666,7 @@
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Mario.xnb</Output>
       <Extra>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Mario.wma</Extra>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9629259-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Prison.mp3</Source>
@@ -676,7 +676,7 @@
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Prison.xnb</Output>
       <Extra>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Prison.wma</Extra>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9679302-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Title.mp3</Source>
@@ -686,7 +686,7 @@
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Title.xnb</Output>
       <Extra>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Title.wma</Extra>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:45.9799413-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\blip.wav</Source>
@@ -695,7 +695,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\blip.xnb</Output>
-      <Time>2014-04-17T15:56:40-06:00</Time>
+      <Time>2014-04-17T23:25:46.0009579-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -735,7 +735,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-03-05T14:44:46.3838846-07:00</Value>
+        <Value>2014-04-17T01:45:50.5427804-06:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
