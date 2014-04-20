@@ -380,10 +380,9 @@ namespace BustinOutMegaMan
             
             if (currentFrame <= 15)
             
-                //deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                 currentFrame = 16;
 
-                if (deathTimer > interval * 25)
+                if (deathTimer > interval)
                 {
                     currentFrame++;
 
