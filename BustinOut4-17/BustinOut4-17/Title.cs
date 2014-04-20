@@ -52,8 +52,8 @@ namespace BustinOutMegaMan
             {
                 if (option == 0)
                 {
-                    BustinOutGame.setState(4, 0);
                     BustinOutGame.setLevel(1);
+                    BustinOutGame.setState(4, 0);
                 }
                 else if (option == 1)
                 {

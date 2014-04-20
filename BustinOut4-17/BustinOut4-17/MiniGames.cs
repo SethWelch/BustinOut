@@ -41,15 +41,15 @@ namespace BustinOutMegaMan
             {
                 if (option == 0)
                 {
-                    BustinOutGame.setState(8, 1);
+                    BustinOutGame.setState(8, 0);
                 }
                 else if (option == 1)
                 {
-                    BustinOutGame.setState(9, 1);
+                    BustinOutGame.setState(9, 0);
                 }
                 else if (option == 2)
                 {
-                    BustinOutGame.setState(6, 1);
+
                 }
                 else if (option == 3)
                 {
