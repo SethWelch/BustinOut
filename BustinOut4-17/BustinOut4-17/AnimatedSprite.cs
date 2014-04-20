@@ -19,7 +19,7 @@ namespace BustinOutMegaMan
         public static int direction = 1;
         Rectangle sourceRect;
         Vector2 position, origin;
-        bool jumping, running;
+        bool jumping, running, isAlive = true;
         public static bool shooting = false;
 
         //for megaman
@@ -115,7 +115,7 @@ namespace BustinOutMegaMan
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
             mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
 
-            if (jumping)
+            if (jumping && isAlive)
             {
                 //Figures out sprite for jumping in either direction
                 if (direction == 0)
@@ -152,7 +152,7 @@ namespace BustinOutMegaMan
             }
 
             // If shooting key is held down then he'll stay in the shooting frame
-            if (shooting)
+            if (shooting && isAlive)
             {
                 currentTime += bulletSpeed;//(float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -164,7 +164,7 @@ namespace BustinOutMegaMan
             }
 
             //Animate Right Movement
-            if (ctrl.moveRight())
+            if (ctrl.moveRight() && isAlive)
             {
                 running = true;
                 AnimateRight(gameTime);
@@ -175,7 +175,7 @@ namespace BustinOutMegaMan
             }
 
             // Animate Left Movement
-            if (ctrl.moveLeft())
+            if (ctrl.moveLeft() && isAlive)
             {
                 running = true;
                 AnimateLeft(gameTime);
@@ -187,7 +187,7 @@ namespace BustinOutMegaMan
 
             // If both left and right keys are pressed stop moving, seems to always face left
             // but the main part of the guy not moving works
-            if (ctrl.moveStop())
+            if (ctrl.moveStop() && isAlive)
             {
                 if (direction == 0)
                     if (jumping)
@@ -214,7 +214,7 @@ namespace BustinOutMegaMan
             }
 
             //If just standing around then have appropriate standing sprites.
-            if (!(ctrl.doNothing() || jumping || shooting))
+            if (!(ctrl.doNothing() || jumping || shooting) && isAlive)
             {
                 running = false;
 
@@ -225,7 +225,7 @@ namespace BustinOutMegaMan
             }
 
             // Based shooting flag OP
-            if (ctrl.shoot())
+            if (ctrl.shoot() && isAlive)
             {
                 shooting = true;
 
@@ -253,8 +253,9 @@ namespace BustinOutMegaMan
 
         //applies gravity
         private void AffectWithGravity()
-        {
-            Movement += Vector2.UnitY * gravity;
+        {   
+            if (isAlive)
+                Movement += Vector2.UnitY * gravity;
         }
 
         //apply friction, friction is stronger when mm is on the ground
@@ -359,26 +360,36 @@ namespace BustinOutMegaMan
         //checks if megaman falls down a hole and puts him back at start
         private void CheckForPitDeath(GameTime gameTime)
         {
-            if (Position.Y > pitDepth)
+            if (Position.X > 500)
             {
                 BustinOutGame.clearBullets();
 
-                currentFrame = 16;
-
-                deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-
-                if (deathTimer > interval * 2)
-                {
-                    currentFrame++;
-
-                    deathTimer = 0f;
-                }
+                MegaManExplode(gameTime);
             }
 
             if (Position.Y > 850)
                 Position = new Vector2(startX, startY);
         }
 
+
+        private void MegaManExplode(GameTime gameTime)
+        {
+            isAlive = false;
+            
+            deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            
+            if (currentFrame <= 15)
+            
+                //deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                currentFrame = 16;
+
+                if (deathTimer > interval * 25)
+                {
+                    currentFrame++;
+
+                   deathTimer = 0f;
+                } 
+        }
         public Vector2 Position
         {
             get { return position; }
