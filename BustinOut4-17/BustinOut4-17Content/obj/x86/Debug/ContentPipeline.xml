@@ -697,6 +697,33 @@
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\blip.xnb</Output>
       <Time>2014-04-17T23:25:46.0009579-06:00</Time>
     </Item>
+    <Item>
+      <Source>Images\Menus\ShowControls.png</Source>
+      <Name>Images\Menus\ShowControls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\ShowControls.xnb</Output>
+      <Time>2014-04-21T01:34:19.6273479-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Menus\DifficultySelect.png</Source>
+      <Name>Images\Menus\DifficultySelect</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\DifficultySelect.xnb</Output>
+      <Time>2014-04-21T01:35:07.667144-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\bowserText.png</Source>
+      <Name>Images\bowserText</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb</Output>
+      <Time>2014-04-21T03:17:17.7978661-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

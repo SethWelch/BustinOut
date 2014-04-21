@@ -22,7 +22,7 @@ namespace BustinOutMegaMan
         public SpriteBatch spriteBatch;
         public static TimeSpan timeRemaining = TimeSpan.FromMinutes(20.0);
         private Texture2D tileTexture1, tileTexture2, blockTexture, platformTexture, megamanTexture, bowser,
-            spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons;
+            spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons, bowserText;
         private static Texture2D ui, prison1, prison2, prison3, prisonBoss, black, stairs, mb1, mb2, mb3, mb4, pong;
         public static AnimatedSprite megaman;
         public static bool screenChange = false;
@@ -63,6 +63,8 @@ namespace BustinOutMegaMan
         Graphics grph = new Graphics();
         MiniGames mini = new MiniGames();
         PlayerControls ctrl = new PlayerControls();
+        DifficultySelect difficult = new DifficultySelect();
+        ShowControls show = new ShowControls();
 
 
         public static List<Projectiles> LiveProjectiles;
@@ -85,7 +87,9 @@ namespace BustinOutMegaMan
             Graphics,
             Pause,
             Pong,
-            Frogger
+            Frogger,
+            Show,
+            Difficulty
         }
 
         private static GameState mCurrentState = GameState.Title;
@@ -114,6 +118,8 @@ namespace BustinOutMegaMan
             frog.LoadContent(Content);
             grph.LoadContent(Content);
             mini.LoadContent(Content);
+            difficult.LoadContent(Content);
+            show.LoadContent(Content);
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             viewButtons = Content.Load<Texture2D>("Images/Menus/buttonsInverted");
@@ -129,6 +135,7 @@ namespace BustinOutMegaMan
             spikesLeftTexture = Content.Load<Texture2D>("Images/Objects/Spikes Left");
             spikesRightTexture = Content.Load<Texture2D>("Images/Objects/Spikes Right");
             bowser = Content.Load<Texture2D>("Images/bowser2");
+            bowserText = Content.Load<Texture2D>("Images/bowserText");
             ui = Content.Load<Texture2D>("Images/UI Overlay");
             megaman = new AnimatedSprite(megamanTexture, 0, 60, 50);
 
@@ -288,6 +295,18 @@ namespace BustinOutMegaMan
 
                         break;
                     }
+                case GameState.Difficulty:
+                    {
+                        difficult.Draw(spriteBatch, yCorrect, this.Window.ClientBounds.Width, this.Window.ClientBounds.Height - (yCorrect * 2));
+
+                        break;
+                    }
+                case GameState.Show:
+                    {
+                        show.Draw(spriteBatch, yCorrect, this.Window.ClientBounds.Width, this.Window.ClientBounds.Height - (yCorrect * 2));
+
+                        break;
+                    }
                 case GameState.Pong:
                     {
                         game.Draw(spriteBatch, timeRemaining);
@@ -321,7 +340,6 @@ namespace BustinOutMegaMan
 
                         spriteBatch.Draw(ui, new Vector2(0, 0), Color.White);
                         if (debugBool) WriteDebugInformation();
-                        spriteBatch.Draw(megaman.Texture, megaman.Position, megaman.SourceRect, Color.White, 0f, megaman.Origin, 1.0f, SpriteEffects.None, 0);
                         DrawHud();
 
                         for (int i = 0; i < LiveProjectiles.Count; i++)
@@ -335,9 +353,12 @@ namespace BustinOutMegaMan
                         if (bgNum == 3 && level == 1)
                         {
                             spriteBatch.Draw(bowser, new Vector2(800, 250), Color.White);
-                            spriteBatch.Draw(pong, new Vector2(600, 475), Color.White);
+                            spriteBatch.Draw(bowserText, new Vector2(525, 175), Color.White);
+                            spriteBatch.Draw(pong, new Vector2(600, 425), Color.White);
                         }
                         //---------------------End Bowser-------------------------//
+
+                        spriteBatch.Draw(megaman.Texture, megaman.Position, megaman.SourceRect, Color.White, 0f, megaman.Origin, 1.0f, SpriteEffects.None, 0);
 
                         break;
                     }
@@ -433,6 +454,18 @@ namespace BustinOutMegaMan
                 case GameState.Pause:
                     {
                         pause.Update(gameTime);
+
+                        break;
+                    }
+                case GameState.Difficulty:
+                    {
+                        difficult.Update(gameTime);
+
+                        break;
+                    }
+                case GameState.Show:
+                    {
+                        show.Update(gameTime);
 
                         break;
                     }
@@ -659,10 +692,20 @@ namespace BustinOutMegaMan
                 mCurrentState = GameState.MiniGames;
                 currentGameState = 10;
             }
-            else
+            else if (state == 11)
             {
                 mCurrentState = GameState.Graphics;
                 currentGameState = 11;
+            }
+            else if(state == 12)
+            {
+                mCurrentState = GameState.Show;
+                currentGameState = 12;
+            }
+            else
+            {
+                mCurrentState = GameState.Difficulty;
+                currentGameState = 13;
             }
         }
 
