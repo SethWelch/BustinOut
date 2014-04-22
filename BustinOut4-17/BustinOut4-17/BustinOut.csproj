@@ -112,6 +112,7 @@
     <Compile Include="Board.cs" />
     <Compile Include="BustinOutGame.cs" />
     <Compile Include="Controls.cs" />
+    <Compile Include="DifficultySelect.cs" />
     <Compile Include="Enemies.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Frogger.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Projectiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowControls.cs" />
     <Compile Include="Sounds.cs" />
     <Compile Include="Sprite.cs" />
     <Compile Include="Tile.cs" />
