@@ -25,7 +25,7 @@ namespace BustinOutMegaMan
             spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons, bowserText;
         private static Texture2D ui, prison1, prison2, prison3, prisonBoss, black, stairs, mb1, mb2, mb3, mb4, pong;
         public static AnimatedSprite megaman;
-        public static bool soundBool = true;
+        public static bool soundBool = true, screenChange = false;
         private Board board1, board2;
         private Random rnd = new Random();
         private SpriteFont debugFont;

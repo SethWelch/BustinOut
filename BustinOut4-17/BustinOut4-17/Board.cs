@@ -259,6 +259,7 @@ namespace BustinOutMegaMan
                 Tiles[38, 12].Texture = SpikesUpTexture;
                 Tiles[27, 12].IsBlocked = true;
                 Tiles[27, 12].Texture = SpikesUpTexture;
+                
                 Tiles[28, 14].IsBlocked = true;
                 Tiles[28, 14].Texture = SpikesDownTexture;
                 //Tiles[29, 14].IsBlocked = true;
@@ -394,6 +395,19 @@ namespace BustinOutMegaMan
             }
         }
 
+        //checks to see if the passed in rectangle collides with any of the spikes tiles
+        public bool HitSpike(Rectangle rectangleToCheck)
+        {
+            foreach (var tile in Board.CurrentBoard.Tiles)
+            {
+                if ((tile.Texture == SpikesDownTexture || tile.Texture == SpikesUpTexture || tile.Texture == SpikesLeftTexture || tile.Texture == SpikesRightTexture) && 
+                    new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width,
+                        (int)tile.Texture.Height).Intersects(rectangleToCheck)) 
+                    return true;    
+            }
+            return false;
+        }
+
         public bool HasRoomForRectangle(Rectangle rectangleToCheck)
         {
             foreach (var tile in Tiles)
@@ -404,6 +418,18 @@ namespace BustinOutMegaMan
                 }
             }
             return true;
+        }
+
+        public bool bumpedIntoBlock(Rectangle rectangleToCheck)
+        {
+            foreach (var tile in Tiles)
+            {
+                if (tile.IsBlocked && new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width, (int)tile.Texture.Height).Intersects(rectangleToCheck))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public Vector2 WhereCanIGetTo(Vector2 originalPosition, Vector2 destination, Rectangle boundingRectangle)

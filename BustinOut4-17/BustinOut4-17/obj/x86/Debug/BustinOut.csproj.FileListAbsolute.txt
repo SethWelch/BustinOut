@@ -169,7 +169,6 @@ C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Deb
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\BustinOut4-17.exe
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\BustinOut4-17.pdb
-C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\BustinOut.csprojResolveAssemblyReference.cache
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\ShowControls.xnb
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\DifficultySelect.xnb
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb

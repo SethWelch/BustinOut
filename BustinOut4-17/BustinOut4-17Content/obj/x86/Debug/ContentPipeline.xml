@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\MegaManRun.xnb</Output>
-      <Time>2014-04-23T11:02:11.9774651-06:00</Time>
+      <Time>2014-04-23T11:47:59.5561026-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mega_man_pong.png</Source>
@@ -731,7 +731,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\sound.xnb</Output>
-      <Time>2014-04-23T10:53:30.253634-06:00</Time>
+      <Time>2014-04-23T11:33:53.7471734-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\goBack.wav</Source>
@@ -740,7 +740,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\goBack.xnb</Output>
-      <Time>2014-04-23T10:53:30.2506328-06:00</Time>
+      <Time>2014-04-23T11:33:53.7441712-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\select.wav</Source>
@@ -749,7 +749,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\select.xnb</Output>
-      <Time>2014-04-23T10:53:30.2516326-06:00</Time>
+      <Time>2014-04-23T11:33:53.7461726-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

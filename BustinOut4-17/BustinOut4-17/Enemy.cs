@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -18,22 +19,28 @@ namespace BustinOutMegaMan
 {
     public class Enemy
     {
+        private GraphicsDeviceManager graphics;
+
         Texture2D enemySprite;
         Vector2 position;
         int currentFrame;
-        float aliveFrameInterval, deathFrameInterval, directionInterval, timer;
+        float aliveFrameInterval, deathFrameInterval, timer;
+        float shootTimer, shootInterval;
+        int shootSpeed;
         string spriteSet;
         EnemyType type;
         Rectangle bounds;
         bool isAlive;
         bool hasDied;
 
-        Texture2D rect;
-
         Animation aliveAnimation = new Animation();
         Animation deathAnimation = new Animation();
 
         FaceDirection direction;
+
+        public List<Projectiles> enemyProjectiles;
+
+        Texture2D bullet;
 
         int moveSpeed;
 
@@ -58,6 +65,7 @@ namespace BustinOutMegaMan
             currentFrame = 0;
             aliveFrameInterval = 150;
             deathFrameInterval = 300;
+            shootInterval = 300;
             type = (EnemyType)enemyType;
             spriteSet = spriteName;
             moveSpeed = speed;
@@ -65,6 +73,8 @@ namespace BustinOutMegaMan
             hasDied = false;
             direction = FaceDirection.Left;
 
+            enemyProjectiles = new List<Projectiles>();
+            shootSpeed = 10;
         }
 
         public void LoadContent(ContentManager Content)
@@ -74,6 +84,7 @@ namespace BustinOutMegaMan
             bounds = aliveAnimation.bounds;
             enemySprite = Content.Load<Texture2D>("Images/explosion");
             deathAnimation.animationImage = enemySprite;
+            bullet = Content.Load<Texture2D>("Images/Objects/bullet");
         }
 
         public void Update(GameTime gameTime)
@@ -91,6 +102,7 @@ namespace BustinOutMegaMan
                         currentFrame = 0;
 
                     timer -= aliveFrameInterval;
+                    
                 }
 
 
@@ -120,12 +132,23 @@ namespace BustinOutMegaMan
                         break;
                 }
 
+                
+
                 //check if the enemy should be falling
-                if (!IsOnFirmGround(new Rectangle((int)position.X, (int)position.Y, 1, 4)))
+                if (!IsOnFirmGround(new Rectangle((int)position.X - aliveAnimation.spriteWidth, (int)position.Y - aliveAnimation.spriteHeight,
+                        aliveAnimation.spriteWidth, aliveAnimation.spriteHeight)))
                 {
                     affectWithGravity();
                 }
 
+                if (Board.CurrentBoard.bumpedIntoBlock(new Rectangle((int)position.X - aliveAnimation.spriteWidth, (int)position.Y - 20, aliveAnimation.spriteWidth, 1)))
+                {
+                    direction = (FaceDirection)(-(int)direction);
+                }
+
+
+
+                
 
                 aliveAnimation.Direction = (int)direction;
                 aliveAnimation.CurrentFrame = currentFrame;
@@ -152,6 +175,8 @@ namespace BustinOutMegaMan
                     hasDied = !hasDied;
 
             }
+
+            shootBullets(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -165,6 +190,12 @@ namespace BustinOutMegaMan
 
                 deathAnimation.Draw(spriteBatch);
             }
+
+            for (int i = 0; i < enemyProjectiles.Count; i++)
+            {
+                spriteBatch.Draw(bullet, enemyProjectiles[i].Position, null, Color.White, 0f, new Vector2(bullet.Width / 2, bullet.Height / 2), 1f, SpriteEffects.None, 0);
+            }
+
         }
 
         //this method creates the gravity for the enemies
@@ -189,12 +220,13 @@ namespace BustinOutMegaMan
 
             if (direction == FaceDirection.Left)
             {
-                onePixelLower.Offset(-20, 1);
+                onePixelLower.Offset(-aliveAnimation.spriteWidth, 0);
             }
             else
             {
-                onePixelLower.Offset(2, 1);
+                onePixelLower.Offset(2, 0);
             }
+
 
             return !Board.CurrentBoard.HasRoomForRectangle(onePixelLower);
         }
@@ -208,7 +240,7 @@ namespace BustinOutMegaMan
                 {
                     if (b.Position.X > position.X - aliveAnimation.spriteWidth)
                     {
-                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - 64)
+                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - aliveAnimation.spriteHeight)
                         {
                             bullets.RemoveAt(bullets.IndexOf(b));
                             isAlive = false;
@@ -228,8 +260,77 @@ namespace BustinOutMegaMan
                         }
                     }
                 }
+
+
             }
         }
+
+        private void shootBullets(GameTime gameTime)
+        {
+            //if player is to the left and on the same level and
+            //if the enemy is facing them shoot a bullet
+
+            shootTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            Projectiles enemyBullet = new Projectiles();
+
+            if (BustinOutGame.megaman.Position.X < position.X && direction == FaceDirection.Left)
+            {
+                if (BustinOutGame.megaman.Position.Y <= position.Y &&  BustinOutGame.megaman.Position.Y >= position.Y - aliveAnimation.spriteHeight)
+                {
+                    enemyBullet.Position = new Vector2((position.X - aliveAnimation.spriteWidth), (position.Y - (aliveAnimation.spriteHeight / 2)));
+                    enemyBullet.Velocity = new Vector2(shootSpeed * (int)direction, 0);
+                    enemyBullet.bound = new Rectangle((int)enemyBullet.Position.X, (int)enemyBullet.Position.Y, bullet.Width, bullet.Height);
+
+                    if (shootTimer > shootInterval && isAlive)
+                    {
+                        enemyProjectiles.Add(enemyBullet);
+                        shootTimer -= shootInterval;
+                    }
+
+                }
+
+            }
+
+            if (BustinOutGame.megaman.Position.X > position.X && direction == FaceDirection.Right)
+            {
+                if (BustinOutGame.megaman.Position.Y <= position.Y && BustinOutGame.megaman.Position.Y >= position.Y - aliveAnimation.spriteHeight)
+                {
+                    enemyBullet.Position = new Vector2(position.X , (position.Y - (aliveAnimation.spriteHeight / 2)));
+                    enemyBullet.Velocity = new Vector2(shootSpeed * (int)direction, 0);
+                    enemyBullet.bound = new Rectangle((int)enemyBullet.Position.X, (int)enemyBullet.Position.Y, bullet.Width, bullet.Height);
+
+                    if (shootTimer > shootInterval && isAlive)
+                    {
+                        enemyProjectiles.Add(enemyBullet);
+                        shootTimer -= shootInterval;
+                    }
+
+                }
+
+            }
+
+
+            foreach (Projectiles p in enemyProjectiles.ToArray())
+            {
+                p.Position += p.Velocity;
+
+                //check to see when the projectile leaves the visible part of the screen
+                if (p.Position.X < 0 || p.Position.X > 1600)
+                {
+                    enemyProjectiles.RemoveAt(enemyProjectiles.IndexOf(p));
+                }
+
+                if (BustinOutGame.screenChange == true)
+                {
+                    enemyProjectiles.Clear();
+                    BustinOutGame.screenChange = false;
+                }
+            }
+
+
+        }
+
 
         public bool isDead()
         {
