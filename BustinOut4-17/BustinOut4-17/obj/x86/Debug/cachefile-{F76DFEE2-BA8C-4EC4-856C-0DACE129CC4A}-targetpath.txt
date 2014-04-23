@@ -71,6 +71,9 @@ Content\Images\truck.xnb
 Content\Images\UI Overlay.xnb
 Content\jumper.xnb
 Content\tile.xnb
+Content\Images\Menus\ShowControls.xnb
+Content\Images\Menus\DifficultySelect.xnb
+Content\Images\bowserText.xnb
 Content\Music\Mario.xnb
 Content\Music\Mario.wma
 Content\Music\Prison.xnb
@@ -78,9 +81,6 @@ Content\Music\Prison.wma
 Content\Music\Title.xnb
 Content\Music\Title.wma
 Content\Sounds\blip.xnb
-Content\Images\Menus\ShowControls.xnb
-Content\Images\Menus\DifficultySelect.xnb
-Content\Images\bowserText.xnb
 Content\Sounds\sound.xnb
 Content\Sounds\goBack.xnb
 Content\Sounds\select.xnb
