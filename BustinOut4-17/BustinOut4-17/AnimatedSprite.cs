@@ -402,10 +402,16 @@ namespace BustinOutMegaMan
         //checks if megaman hits a spike
         private void CheckForSpikeDeath(GameTime gameTime)
         {
-            
-            Rectangle onePixelHigher = mman;
-            onePixelHigher.Offset(0, -1);
 
+            Rectangle onePixelHigher = mman;  //offset for spikes to the right
+            onePixelHigher.Offset(0, -1);
+            Rectangle onePixelLower = mman; //offset for spikes below
+            onePixelLower.Offset(0, 1);
+            Rectangle onePixelRight = mman; //offset spikes to the right
+            onePixelRight.Offset(1, 0);
+            Rectangle onePixelLeft = mman; //offset for spikes to the left
+            onePixelLeft.Offset(-1, 0);
+            
             //checks for spikes above
             if (Board.CurrentBoard.HitSpike(onePixelHigher))
             {
@@ -413,30 +419,21 @@ namespace BustinOutMegaMan
                 MegaManExplode(gameTime);
             }
 
-            //checks for spikes below
-            Rectangle onePixelLower = mman;
-            onePixelHigher.Offset(0, 1);
-
+            //spikes below
             if (Board.CurrentBoard.HitSpike(onePixelLower))
             {
                 isAlive = false;
                 MegaManExplode(gameTime);
             }
 
-            //spikes to the right
-            Rectangle onePixelRight = mman;
-            onePixelHigher.Offset(1, 0);
-
+            //spikes right
             if (Board.CurrentBoard.HitSpike(onePixelRight))
             {
                 isAlive = false;
                 MegaManExplode(gameTime);
             }
 
-            //spikes to the left
-            Rectangle onePixelLeft = mman;
-            onePixelHigher.Offset(-1, 0);
-
+            //spikes left
             if (Board.CurrentBoard.HitSpike(onePixelLeft))
             {
                 isAlive = false;
