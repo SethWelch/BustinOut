@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\DebugFont.xnb</Output>
-      <Time>2014-04-22T18:39:02.1370674-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\DebugFont.xnb</Output>
+      <Time>2014-04-20T12:38:20.7823808-06:00</Time>
     </Item>
     <Item>
       <Source>Fonts\font.spritefont</Source>
@@ -16,8 +16,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\font.xnb</Output>
-      <Time>2014-04-22T18:39:02.165069-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\font.xnb</Output>
+      <Time>2014-04-20T12:38:20.7943815-06:00</Time>
     </Item>
     <Item>
       <Source>Fonts\font2.spritefont</Source>
@@ -25,8 +25,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\font2.xnb</Output>
-      <Time>2014-04-22T18:39:02.165069-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\font2.xnb</Output>
+      <Time>2014-04-20T12:38:20.7963816-06:00</Time>
     </Item>
     <Item>
       <Source>Fonts\HUD.spritefont</Source>
@@ -34,8 +34,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\HUD.xnb</Output>
-      <Time>2014-04-22T18:39:02.1630688-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Fonts\HUD.xnb</Output>
+      <Time>2014-04-20T12:38:20.7933814-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\background.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\background.xnb</Output>
-      <Time>2014-04-22T18:39:02.1810699-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\background.xnb</Output>
+      <Time>2014-04-20T12:38:20.8083823-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\froggerBG.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\froggerBG.xnb</Output>
-      <Time>2014-04-22T18:39:02.1820699-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\froggerBG.xnb</Output>
+      <Time>2014-04-20T12:38:20.8083823-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mb1.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb1.xnb</Output>
-      <Time>2014-04-22T18:39:02.1850701-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb1.xnb</Output>
+      <Time>2014-04-20T12:38:20.8103824-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mb2.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb2.xnb</Output>
-      <Time>2014-04-22T18:39:02.1870702-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8133826-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mb3.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb3.xnb</Output>
-      <Time>2014-04-22T18:39:02.1890703-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mb3.xnb</Output>
+      <Time>2014-04-20T12:38:20.8153827-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\mboss.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mboss.xnb</Output>
-      <Time>2014-04-22T18:39:02.1900704-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\mboss.xnb</Output>
+      <Time>2014-04-20T12:38:20.8163828-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PongBG.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PongBG.xnb</Output>
-      <Time>2014-04-22T18:39:02.166069-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PongBG.xnb</Output>
+      <Time>2014-04-20T12:38:20.7973817-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBackground1.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground1.xnb</Output>
-      <Time>2014-04-22T18:39:02.1670691-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground1.xnb</Output>
+      <Time>2014-04-20T12:38:20.7983817-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBackground2.png</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground2.xnb</Output>
-      <Time>2014-04-22T18:39:02.1800698-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8053821-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBackground3.png</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground3.xnb</Output>
-      <Time>2014-04-22T18:39:02.1800698-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBackground3.xnb</Output>
+      <Time>2014-04-20T12:38:20.8063822-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Backgrounds\PrisonBoss.png</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBoss.xnb</Output>
-      <Time>2014-04-22T18:39:02.1810699-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Backgrounds\PrisonBoss.xnb</Output>
+      <Time>2014-04-20T12:38:20.8073822-06:00</Time>
     </Item>
     <Item>
       <Source>Images\blocked.png</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\blocked.xnb</Output>
-      <Time>2014-04-22T18:39:02.2650747-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\blocked.xnb</Output>
+      <Time>2014-04-20T12:38:20.891387-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowser.png</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowser.xnb</Output>
-      <Time>2014-04-22T18:39:02.2650747-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowser.xnb</Output>
+      <Time>2014-04-20T12:38:20.891387-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowser2.png</Source>
@@ -160,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowser2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2660747-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowser2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8933872-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Enemy1A.png</Source>
@@ -169,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Enemy1A.xnb</Output>
-      <Time>2014-04-22T18:39:02.1900704-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Enemy1A.xnb</Output>
+      <Time>2014-04-20T12:38:20.8173828-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Enemy1B.png</Source>
@@ -178,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Enemy1B.xnb</Output>
-      <Time>2014-04-22T18:39:02.1910705-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Enemy1B.xnb</Output>
+      <Time>2014-04-20T12:38:20.8183829-06:00</Time>
     </Item>
     <Item>
       <Source>Images\explosion.png</Source>
@@ -187,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\explosion.xnb</Output>
-      <Time>2014-04-22T18:39:02.2670748-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\explosion.xnb</Output>
+      <Time>2014-04-20T12:38:20.8943872-06:00</Time>
     </Item>
     <Item>
       <Source>Images\MegaManRun.png</Source>
@@ -196,8 +196,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\MegaManRun.xnb</Output>
-      <Time>2014-04-22T18:39:02.1920705-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\MegaManRun.xnb</Output>
+      <Time>2014-04-20T12:38:20.8193829-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mega_man_pong.png</Source>
@@ -205,8 +205,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mega_man_pong.xnb</Output>
-      <Time>2014-04-22T18:39:02.2680749-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mega_man_pong.xnb</Output>
+      <Time>2014-04-20T12:38:20.8963873-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\buttonsInverted.png</Source>
@@ -214,8 +214,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\buttonsInverted.xnb</Output>
-      <Time>2014-04-22T18:39:02.2570742-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\buttonsInverted.xnb</Output>
+      <Time>2014-04-20T12:38:20.8633854-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Controls Screen 2.png</Source>
@@ -223,8 +223,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Controls Screen 2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2080714-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Controls Screen 2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8233832-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Difficulty Select.png</Source>
@@ -232,8 +232,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Difficulty Select.xnb</Output>
-      <Time>2014-04-22T18:39:02.2090715-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Difficulty Select.xnb</Output>
+      <Time>2014-04-20T12:38:20.8253833-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Graphics.png</Source>
@@ -241,8 +241,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Graphics.xnb</Output>
-      <Time>2014-04-22T18:39:02.218072-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Graphics.xnb</Output>
+      <Time>2014-04-20T12:38:20.8263833-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Graphics2.png</Source>
@@ -250,8 +250,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Graphics2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2190721-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Graphics2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8323837-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Hall of fame.png</Source>
@@ -259,8 +259,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Hall of fame.xnb</Output>
-      <Time>2014-04-22T18:39:02.2200721-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Hall of fame.xnb</Output>
+      <Time>2014-04-20T12:38:20.8333837-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Mini Game.png</Source>
@@ -268,8 +268,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Mini Game.xnb</Output>
-      <Time>2014-04-22T18:39:02.2200721-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Mini Game.xnb</Output>
+      <Time>2014-04-20T12:38:20.8343838-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Options Menu.png</Source>
@@ -277,8 +277,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Options Menu.xnb</Output>
-      <Time>2014-04-22T18:39:02.2240723-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Options Menu.xnb</Output>
+      <Time>2014-04-20T12:38:20.837384-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Pause.png</Source>
@@ -286,8 +286,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Pause.xnb</Output>
-      <Time>2014-04-22T18:39:02.2260725-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Pause.xnb</Output>
+      <Time>2014-04-20T12:38:20.8403841-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 2.png</Source>
@@ -295,8 +295,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2270725-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8423842-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 3.png</Source>
@@ -304,8 +304,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 3.xnb</Output>
-      <Time>2014-04-22T18:39:02.2280726-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 3.xnb</Output>
+      <Time>2014-04-20T12:38:20.8433843-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 4.png</Source>
@@ -313,8 +313,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 4.xnb</Output>
-      <Time>2014-04-22T18:39:02.2290726-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 4.xnb</Output>
+      <Time>2014-04-20T12:38:20.8443844-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 5.png</Source>
@@ -322,8 +322,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 5.xnb</Output>
-      <Time>2014-04-22T18:39:02.2300727-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 5.xnb</Output>
+      <Time>2014-04-20T12:38:20.8463845-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen 6.png</Source>
@@ -331,8 +331,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 6.xnb</Output>
-      <Time>2014-04-22T18:39:02.2310727-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen 6.xnb</Output>
+      <Time>2014-04-20T12:38:20.8473845-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Sound screen.png</Source>
@@ -340,8 +340,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen.xnb</Output>
-      <Time>2014-04-22T18:39:02.2340729-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Sound screen.xnb</Output>
+      <Time>2014-04-20T12:38:20.8483846-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Title Screen Quit Game.png</Source>
@@ -349,8 +349,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Title Screen Quit Game.xnb</Output>
-      <Time>2014-04-22T18:39:02.2380731-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Title Screen Quit Game.xnb</Output>
+      <Time>2014-04-20T12:38:20.8533849-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\Title Screen.png</Source>
@@ -358,8 +358,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Title Screen.xnb</Output>
-      <Time>2014-04-22T18:39:02.253074-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\Title Screen.xnb</Output>
+      <Time>2014-04-20T12:38:20.8573851-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\TitleScreen.png</Source>
@@ -367,8 +367,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\TitleScreen.xnb</Output>
-      <Time>2014-04-22T18:39:02.2570742-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\TitleScreen.xnb</Output>
+      <Time>2014-04-20T12:38:20.8623854-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mman.png</Source>
@@ -376,8 +376,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mman.xnb</Output>
-      <Time>2014-04-22T18:39:02.2680749-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mman.xnb</Output>
+      <Time>2014-04-20T12:38:20.8963873-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mman2.png</Source>
@@ -385,8 +385,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mman2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2680749-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\mman2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8973874-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\arrow.png</Source>
@@ -394,8 +394,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\arrow.xnb</Output>
-      <Time>2014-04-22T18:39:02.2590743-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\arrow.xnb</Output>
+      <Time>2014-04-20T12:38:20.8773862-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\arrow2.png</Source>
@@ -403,8 +403,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\arrow2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2600744-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\arrow2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8783863-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\ball.png</Source>
@@ -412,8 +412,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\ball.xnb</Output>
-      <Time>2014-04-22T18:39:02.2600744-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\ball.xnb</Output>
+      <Time>2014-04-20T12:38:20.8783863-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\block.png</Source>
@@ -421,8 +421,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\block.xnb</Output>
-      <Time>2014-04-22T18:39:02.2600744-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\block.xnb</Output>
+      <Time>2014-04-20T12:38:20.8793864-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\blocked.png</Source>
@@ -430,8 +430,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\blocked.xnb</Output>
-      <Time>2014-04-22T18:39:02.2600744-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\blocked.xnb</Output>
+      <Time>2014-04-20T12:38:20.8803864-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\bullet.png</Source>
@@ -439,8 +439,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\bullet.xnb</Output>
-      <Time>2014-04-22T18:39:02.2610745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\bullet.xnb</Output>
+      <Time>2014-04-20T12:38:20.8803864-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\car1.png</Source>
@@ -448,8 +448,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\car1.xnb</Output>
-      <Time>2014-04-22T18:39:02.2610745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\car1.xnb</Output>
+      <Time>2014-04-20T12:38:20.8813865-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\car2.png</Source>
@@ -457,8 +457,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\car2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2610745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\car2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8823865-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\fire.png</Source>
@@ -466,8 +466,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\fire.xnb</Output>
-      <Time>2014-04-22T18:39:02.2610745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\fire.xnb</Output>
+      <Time>2014-04-20T12:38:20.8823865-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\fireball.png</Source>
@@ -475,8 +475,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\fireball.xnb</Output>
-      <Time>2014-04-22T18:39:02.2610745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\fireball.xnb</Output>
+      <Time>2014-04-20T12:38:20.8833866-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\lightning1.png</Source>
@@ -484,8 +484,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\lightning1.xnb</Output>
-      <Time>2014-04-22T18:39:02.2620745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\lightning1.xnb</Output>
+      <Time>2014-04-20T12:38:20.8833866-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\lightning2.png</Source>
@@ -493,8 +493,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\lightning2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2620745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\lightning2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8843866-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\mario block.png</Source>
@@ -502,8 +502,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\mario block.xnb</Output>
-      <Time>2014-04-22T18:39:02.2620745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\mario block.xnb</Output>
+      <Time>2014-04-20T12:38:20.8853867-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\mblock.png</Source>
@@ -511,8 +511,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\mblock.xnb</Output>
-      <Time>2014-04-22T18:39:02.2620745-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\mblock.xnb</Output>
+      <Time>2014-04-20T12:38:20.8853867-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Platform.png</Source>
@@ -520,8 +520,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Platform.xnb</Output>
-      <Time>2014-04-22T18:39:02.2580743-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Platform.xnb</Output>
+      <Time>2014-04-20T12:38:20.8643855-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Pong.png</Source>
@@ -529,8 +529,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Pong.xnb</Output>
-      <Time>2014-04-22T18:39:02.2580743-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Pong.xnb</Output>
+      <Time>2014-04-20T12:38:20.8653856-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\quarter.png</Source>
@@ -538,8 +538,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\quarter.xnb</Output>
-      <Time>2014-04-22T18:39:02.2630746-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\quarter.xnb</Output>
+      <Time>2014-04-20T12:38:20.8863868-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Down.png</Source>
@@ -547,8 +547,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Down.xnb</Output>
-      <Time>2014-04-22T18:39:02.2580743-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Down.xnb</Output>
+      <Time>2014-04-20T12:38:20.8653856-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Left.png</Source>
@@ -556,8 +556,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Left.xnb</Output>
-      <Time>2014-04-22T18:39:02.2580743-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Left.xnb</Output>
+      <Time>2014-04-20T12:38:20.8673857-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Right.png</Source>
@@ -565,8 +565,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Right.xnb</Output>
-      <Time>2014-04-22T18:39:02.2590743-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Right.xnb</Output>
+      <Time>2014-04-20T12:38:20.8753861-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\Spikes Up.png</Source>
@@ -574,8 +574,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Up.xnb</Output>
-      <Time>2014-04-22T18:39:02.2590743-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\Spikes Up.xnb</Output>
+      <Time>2014-04-20T12:38:20.8763862-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\stairs.png</Source>
@@ -583,8 +583,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\stairs.xnb</Output>
-      <Time>2014-04-22T18:39:02.2630746-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\stairs.xnb</Output>
+      <Time>2014-04-20T12:38:20.8873868-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck.png</Source>
@@ -592,8 +592,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck.xnb</Output>
-      <Time>2014-04-22T18:39:02.2630746-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck.xnb</Output>
+      <Time>2014-04-20T12:38:20.8883869-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck2.png</Source>
@@ -601,8 +601,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck2.xnb</Output>
-      <Time>2014-04-22T18:39:02.2630746-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck2.xnb</Output>
+      <Time>2014-04-20T12:38:20.8883869-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck3.png</Source>
@@ -610,8 +610,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck3.xnb</Output>
-      <Time>2014-04-22T18:39:02.2640746-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck3.xnb</Output>
+      <Time>2014-04-20T12:38:20.8893869-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Objects\truck4.png</Source>
@@ -619,8 +619,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck4.xnb</Output>
-      <Time>2014-04-22T18:39:02.2640746-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Objects\truck4.xnb</Output>
+      <Time>2014-04-20T12:38:20.890387-06:00</Time>
     </Item>
     <Item>
       <Source>Images\truck.png</Source>
@@ -628,8 +628,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\truck.xnb</Output>
-      <Time>2014-04-22T18:39:02.2690749-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\truck.xnb</Output>
+      <Time>2014-04-20T12:38:20.8983874-06:00</Time>
     </Item>
     <Item>
       <Source>Images\UI Overlay.png</Source>
@@ -637,8 +637,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\UI Overlay.xnb</Output>
-      <Time>2014-04-22T18:39:02.2640746-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\UI Overlay.xnb</Output>
+      <Time>2014-04-20T12:38:20.890387-06:00</Time>
     </Item>
     <Item>
       <Source>jumper.png</Source>
@@ -646,8 +646,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\jumper.xnb</Output>
-      <Time>2014-04-22T18:39:02.3170777-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\jumper.xnb</Output>
+      <Time>2014-04-20T12:38:20.94239-06:00</Time>
     </Item>
     <Item>
       <Source>tile.png</Source>
@@ -655,8 +655,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\tile.xnb</Output>
-      <Time>2014-04-22T18:39:02.3220779-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\tile.xnb</Output>
+      <Time>2014-04-20T12:38:20.9523905-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\ShowControls.png</Source>
@@ -664,8 +664,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\ShowControls.xnb</Output>
-      <Time>2014-04-22T18:47:26.0518896-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\ShowControls.xnb</Output>
+      <Time>2014-04-23T08:50:54.5552218-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\DifficultySelect.png</Source>
@@ -673,8 +673,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\DifficultySelect.xnb</Output>
-      <Time>2014-04-22T18:47:26.0508896-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\DifficultySelect.xnb</Output>
+      <Time>2014-04-23T08:50:54.5092192-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowserText.png</Source>
@@ -682,8 +682,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb</Output>
-      <Time>2014-04-22T18:47:26.0528897-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb</Output>
+      <Time>2014-04-23T08:50:54.6882294-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Mario.mp3</Source>
@@ -691,9 +691,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Mario.xnb</Output>
-      <Extra>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Mario.wma</Extra>
-      <Time>2014-04-22T18:39:02.2900761-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Mario.xnb</Output>
+      <Extra>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Mario.wma</Extra>
+      <Time>2014-04-20T12:38:20.9133883-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Prison.mp3</Source>
@@ -701,9 +701,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Prison.xnb</Output>
-      <Extra>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Prison.wma</Extra>
-      <Time>2014-04-22T18:39:02.2950764-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Prison.xnb</Output>
+      <Extra>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Prison.wma</Extra>
+      <Time>2014-04-20T12:38:20.9203887-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Title.mp3</Source>
@@ -711,9 +711,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Title.xnb</Output>
-      <Extra>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Title.wma</Extra>
-      <Time>2014-04-22T18:39:02.3120774-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Title.xnb</Output>
+      <Extra>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Music\Title.wma</Extra>
+      <Time>2014-04-20T12:38:20.9383897-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\blip.wav</Source>
@@ -721,8 +721,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\blip.xnb</Output>
-      <Time>2014-04-22T18:39:02.3140775-06:00</Time>
+      <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\blip.xnb</Output>
+      <Time>2014-04-20T12:38:20.9413899-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -730,10 +730,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -762,7 +762,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-02-17T21:15:54.7042241-07:00</Value>
+        <Value>2014-02-20T00:21:22.2779788-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
