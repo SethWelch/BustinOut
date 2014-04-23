@@ -665,7 +665,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\ShowControls.xnb</Output>
-      <Time>2014-04-22T18:39:28.1215536-06:00</Time>
+      <Time>2014-04-22T18:47:26.0518896-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\DifficultySelect.png</Source>
@@ -674,7 +674,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\DifficultySelect.xnb</Output>
-      <Time>2014-04-22T18:39:28.1205535-06:00</Time>
+      <Time>2014-04-22T18:47:26.0508896-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowserText.png</Source>
@@ -683,7 +683,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Majeh\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb</Output>
-      <Time>2014-04-22T18:39:28.1225536-06:00</Time>
+      <Time>2014-04-22T18:47:26.0528897-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Mario.mp3</Source>
