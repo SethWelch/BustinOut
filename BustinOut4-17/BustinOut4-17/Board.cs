@@ -406,6 +406,18 @@ namespace BustinOutMegaMan
             return true;
         }
 
+        public bool bumpedIntoBlock(Rectangle rectangleToCheck)
+        {
+            foreach (var tile in Tiles)
+            {
+                if (tile.IsBlocked && new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width, (int)tile.Texture.Height).Intersects(rectangleToCheck))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public Vector2 WhereCanIGetTo(Vector2 originalPosition, Vector2 destination, Rectangle boundingRectangle)
         {
             MovementWrapper move = new MovementWrapper(originalPosition, destination, boundingRectangle);

@@ -21,19 +21,19 @@ namespace BustinOutMegaMan
         Texture2D enemySprite;
         Vector2 position;
         int currentFrame;
-        float aliveFrameInterval, deathFrameInterval, directionInterval, timer;
+        float aliveFrameInterval, deathFrameInterval, timer;
         string spriteSet;
         EnemyType type;
         Rectangle bounds;
         bool isAlive;
         bool hasDied;
 
-        Texture2D rect;
-
         Animation aliveAnimation = new Animation();
         Animation deathAnimation = new Animation();
 
         FaceDirection direction;
+
+        public List<Projectiles> enemyProjectiles;
 
         int moveSpeed;
 
@@ -121,11 +121,16 @@ namespace BustinOutMegaMan
                 }
 
                 //check if the enemy should be falling
-                if (!IsOnFirmGround(new Rectangle((int)position.X, (int)position.Y, 1, 4)))
+                if (!IsOnFirmGround(new Rectangle((int)position.X - aliveAnimation.spriteWidth, (int)position.Y - aliveAnimation.spriteHeight,
+                        aliveAnimation.spriteWidth, aliveAnimation.spriteHeight)))
                 {
                     affectWithGravity();
                 }
 
+                if (Board.CurrentBoard.bumpedIntoBlock(new Rectangle((int)position.X - aliveAnimation.spriteWidth, (int)position.Y - 20, aliveAnimation.spriteWidth, 1)))
+                {
+                    direction = (FaceDirection)(-(int)direction);
+                }
 
                 aliveAnimation.Direction = (int)direction;
                 aliveAnimation.CurrentFrame = currentFrame;
@@ -189,12 +194,13 @@ namespace BustinOutMegaMan
 
             if (direction == FaceDirection.Left)
             {
-                onePixelLower.Offset(-20, 1);
+                onePixelLower.Offset(-aliveAnimation.spriteWidth, 0);
             }
             else
             {
-                onePixelLower.Offset(2, 1);
+                onePixelLower.Offset(2, 0);
             }
+
 
             return !Board.CurrentBoard.HasRoomForRectangle(onePixelLower);
         }
@@ -208,7 +214,7 @@ namespace BustinOutMegaMan
                 {
                     if (b.Position.X > position.X - aliveAnimation.spriteWidth)
                     {
-                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - 64)
+                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - aliveAnimation.spriteHeight)
                         {
                             bullets.RemoveAt(bullets.IndexOf(b));
                             isAlive = false;

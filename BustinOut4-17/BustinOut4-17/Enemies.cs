@@ -30,16 +30,16 @@ namespace BustinOutMegaMan
             enemies2.Add(new Enemy(1, "Enemy1A", 450, 285, 850, 2));
             enemies2.Add(new Enemy(1, "Enemy1A", 1240, 285, 1300, 2));
             enemies2.Add(new Enemy(2, "Enemy1B", 1550, 685, 0, 3));
-            enemies2.Add(new Enemy(1, "Enemy1A", 350, 705, 900, 2));
+            enemies2.Add(new Enemy(1, "Enemy1A", 350, 715, 900, 2));
             enemies2.Add(new Enemy(2, "Enemy1B", 800, 285, 0, 3));
-            enemies2.Add(new Enemy(1, "Enemy1A", 1130, 705, 1500, 1));
+            enemies2.Add(new Enemy(1, "Enemy1A", 1130, 720, 1500, 1));
 
             enemies3.Add(new Enemy(2, "Enemy1B", 1590, 265, 0, 3));
             enemies3.Add(new Enemy(1, "Enemy1A", 400, 375, 400, 2));
-            enemies3.Add(new Enemy(1, "Enemy1A", 700, 375, 400, 2));
+            enemies3.Add(new Enemy(1, "Enemy1A", 720, 375, 400, 2));
             enemies3.Add(new Enemy(1, "Enemy1A", 1000, 375, 400, 2));
             enemies3.Add(new Enemy(2, "Enemy1B", 1500, 700, 0, 3));
-            enemies3.Add(new Enemy(1, "Enemy1A", 950, 705, 1500, 3));
+            enemies3.Add(new Enemy(1, "Enemy1A", 965, 720, 1500, 3));
 
             foreach (Enemy e in enemies1.ToArray())
             {
