@@ -154,7 +154,7 @@ namespace BustinOutMegaMan
             // If shooting key is held down then he'll stay in the shooting frame
             if (shooting)
             {
-                currentTime += bulletSpeed;//(float)gameTime.ElapsedGameTime.TotalSeconds;
+                currentTime += bulletSpeed;
 
                 if (currentTime >= countDuration)
                 {
@@ -336,7 +336,8 @@ namespace BustinOutMegaMan
         //moves the board when needed
         private void MoveBoardRight()
         {
-            BustinOutGame.screenChange = true;
+            //clear any bullets on screen
+            BustinOutGame.LiveProjectiles.Clear();
 
             BustinOutGame.BGChange(1);
 
@@ -347,7 +348,8 @@ namespace BustinOutMegaMan
 
         private void MoveBoardLeft()
         {
-            BustinOutGame.screenChange = true;
+            //clear any bullets on screen
+            BustinOutGame.LiveProjectiles.Clear();
 
             BustinOutGame.BGChange(0);
 

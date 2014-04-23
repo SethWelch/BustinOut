@@ -704,7 +704,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\ShowControls.xnb</Output>
-      <Time>2014-04-21T01:34:19.6273479-06:00</Time>
+      <Time>2014-04-21T22:00:30.937318-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\DifficultySelect.png</Source>
@@ -713,7 +713,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\DifficultySelect.xnb</Output>
-      <Time>2014-04-21T01:35:07.667144-06:00</Time>
+      <Time>2014-04-21T22:00:30.936317-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowserText.png</Source>
@@ -722,7 +722,34 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb</Output>
-      <Time>2014-04-21T03:17:17.7978661-06:00</Time>
+      <Time>2014-04-21T22:00:30.9443246-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\sound.wav</Source>
+      <Name>Sounds\sound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\sound.xnb</Output>
+      <Time>2014-04-23T02:21:54.6475403-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\goBack.wav</Source>
+      <Name>Sounds\goBack</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\goBack.xnb</Output>
+      <Time>2014-04-23T00:21:15.635459-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\select.wav</Source>
+      <Name>Sounds\select</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\select.xnb</Output>
+      <Time>2014-04-23T00:33:59.7163948-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

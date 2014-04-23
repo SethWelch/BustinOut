@@ -31,9 +31,15 @@ namespace BustinOutMegaMan
         public bool Select()
         {
             if (previousState.IsKeyDown(Keys.Space) == true && currentState.IsKeyDown(Keys.Space) == false || previousState.IsKeyDown(Keys.Enter) == true && currentState.IsKeyDown(Keys.Enter) == false)
+            {
+                BustinOutGame.playArrowSound(2);
                 return true;
+            }
             else if (previousGP.Buttons.A == ButtonState.Released && currentGP.Buttons.A == ButtonState.Pressed)
+            {
+                BustinOutGame.playArrowSound(2);
                 return true;
+            }
             else
                 return false;
         }
@@ -42,9 +48,15 @@ namespace BustinOutMegaMan
         public bool Up()
         {
             if (previousState.IsKeyDown(Keys.W) == true && currentState.IsKeyDown(Keys.W) == false || previousState.IsKeyDown(Keys.Up) == true && currentState.IsKeyDown(Keys.Up) == false)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else if (previousGP.DPad.Up == ButtonState.Released && currentGP.DPad.Up == ButtonState.Pressed)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else
                 return false;
         }
@@ -53,9 +65,15 @@ namespace BustinOutMegaMan
         public bool Down()
         {
             if (previousState.IsKeyDown(Keys.S) == true && currentState.IsKeyDown(Keys.S) == false || previousState.IsKeyDown(Keys.Down) == true && currentState.IsKeyDown(Keys.Down) == false)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else if (previousGP.DPad.Down == ButtonState.Released && currentGP.DPad.Down == ButtonState.Pressed)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else
                 return false;
         }
@@ -64,9 +82,15 @@ namespace BustinOutMegaMan
         public bool Left()
         {
             if (previousState.IsKeyDown(Keys.A) == true && currentState.IsKeyDown(Keys.A) == false || previousState.IsKeyDown(Keys.Left) == true && currentState.IsKeyDown(Keys.Left) == false)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else if (previousGP.DPad.Left == ButtonState.Released && currentGP.DPad.Left == ButtonState.Pressed)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else
                 return false;
         }
@@ -75,9 +99,15 @@ namespace BustinOutMegaMan
         public bool Right()
         {
             if (previousState.IsKeyDown(Keys.D) == true && currentState.IsKeyDown(Keys.D) == false || previousState.IsKeyDown(Keys.Right) == true && currentState.IsKeyDown(Keys.Right) == false)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else if (previousGP.DPad.Right == ButtonState.Released && currentGP.DPad.Right == ButtonState.Pressed)
+            {
+                BustinOutGame.playArrowSound(1);
                 return true;
+            }
             else
                 return false;
         }
@@ -86,9 +116,15 @@ namespace BustinOutMegaMan
         public bool Back()
         {
             if (previousState.IsKeyDown(Keys.Escape) == true && currentState.IsKeyDown(Keys.Escape) == false)
+            {
+                BustinOutGame.playArrowSound(3);
                 return true;
+            }
             else if (previousGP.Buttons.B == ButtonState.Pressed)
+            {
+                BustinOutGame.playArrowSound(3);
                 return true;
+            }
             else
                 return false;
         }

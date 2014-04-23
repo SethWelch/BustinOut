@@ -70,7 +70,7 @@ namespace BustinOutMegaMan
 
             if (ctrl.Back())
             {
-               BustinOutGame.setState(3, 1);
+                BustinOutGame.setState(3, 1);
             }
 
             if (ctrl.Up())

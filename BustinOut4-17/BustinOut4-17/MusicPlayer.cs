@@ -12,7 +12,7 @@ namespace BustinOutMegaMan
     class MusicPlayer 
     {
         private static Song title, prison, mario, song;
-        private static float volume = 1f;
+        private static float volume = .15f;
 
         public static void LoadContent(ContentManager Content)
         {
@@ -103,13 +103,13 @@ namespace BustinOutMegaMan
         //low volume setting
         public static void VolumeLow()
         {
-            MediaPlayer.Volume = .33f;
+            MediaPlayer.Volume = .15f;
         }
 
         //max volume setting
         public static void VolumeMax()
         {
-            MediaPlayer.Volume = 1f;
+            MediaPlayer.Volume = .3f;
         }
     }
 }

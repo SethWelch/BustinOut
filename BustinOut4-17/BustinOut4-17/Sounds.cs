@@ -31,7 +31,7 @@ namespace BustinOutMegaMan
             sound4 = Content.Load<Texture2D>("Images/Menus/Sound screen 4");
             sound5 = Content.Load<Texture2D>("Images/Menus/Sound screen 5");
             sound6 = Content.Load<Texture2D>("Images/Menus/Sound screen 6");
-            soundScreen = sound1;
+            soundScreen = sound2;
             arrow = Content.Load<Texture2D>("Images/Objects/arrow");
             arrow2 = Content.Load<Texture2D>("Images/Objects/arrow2");
             point = arrow;
@@ -261,14 +261,17 @@ namespace BustinOutMegaMan
                 if (musicV == 0)
                 {
                     soundScreen = sound4;
+                    BustinOutGame.soundBool = false;
                 }
                 else if (musicV == 1)
                 {
                     soundScreen = sound5;
+                    BustinOutGame.soundBool = false;
                 }
                 else
                 {
                     soundScreen = sound6;
+                    BustinOutGame.soundBool = false;
                 }
             }
             if (option == 2)
@@ -289,14 +292,20 @@ namespace BustinOutMegaMan
                 if (musicV == 0)
                 {
                     soundScreen = sound3;
+                    BustinOutGame.soundBool = true;
+                    BustinOutGame.playArrowSound(2);
                 }
                 else if (musicV == 1)
                 {
                     soundScreen = sound2;
+                    BustinOutGame.soundBool = true;
+                    BustinOutGame.playArrowSound(2);
                 }
                 else
                 {
                     soundScreen = sound1;
+                    BustinOutGame.soundBool = true;
+                    BustinOutGame.playArrowSound(2);
                 }
             }
             if (option == 4)

@@ -25,7 +25,7 @@ namespace BustinOutMegaMan
             spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons, bowserText;
         private static Texture2D ui, prison1, prison2, prison3, prisonBoss, black, stairs, mb1, mb2, mb3, mb4, pong;
         public static AnimatedSprite megaman;
-        public static bool screenChange = false;
+        public static bool soundBool = true;
         private Board board1, board2;
         private Random rnd = new Random();
         private SpriteFont debugFont;
@@ -34,6 +34,11 @@ namespace BustinOutMegaMan
         private KeyboardState currentState, previousState;
         private static String timeString;
         Rectangle source;
+
+        //for arrow sounds
+        static SoundEffect arrowSound,arrowSelect, arrowBack;
+        static SoundEffectInstance arrowSoundInstance, arrowSelectInstance, arrowBackInstance;
+        float volume = .15f;
 
         public static int screenHeight
         {
@@ -120,6 +125,19 @@ namespace BustinOutMegaMan
             mini.LoadContent(Content);
             difficult.LoadContent(Content);
             show.LoadContent(Content);
+
+            //sound effects
+            arrowSound = Content.Load<SoundEffect>("Sounds/sound");
+            arrowSelect = Content.Load<SoundEffect>("Sounds/select");
+            arrowBack = Content.Load<SoundEffect>("Sounds/goBack");
+
+            //creating each sound instance and setting the volumes
+            arrowSoundInstance = arrowSound.CreateInstance();
+            arrowSoundInstance.Volume = volume;
+            arrowSelectInstance = arrowSelect.CreateInstance();
+            arrowSelectInstance.Volume = volume;
+            arrowBackInstance = arrowBack.CreateInstance();
+            arrowBackInstance.Volume = volume;
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             viewButtons = Content.Load<Texture2D>("Images/Menus/buttonsInverted");
@@ -218,7 +236,7 @@ namespace BustinOutMegaMan
             {
                 Board.CurrentBoard.CreateNewBoard();
                 PutmegamanInBottomLeftCorner();
-                screenChange = true;
+                LiveProjectiles.Clear();
             }
             else if (from == 1)
             {
@@ -532,12 +550,6 @@ namespace BustinOutMegaMan
                             {
                                 LiveProjectiles.RemoveAt(LiveProjectiles.IndexOf(p));
                             }
-
-                            if (screenChange == true)
-                            {
-                                LiveProjectiles.Clear();
-                                screenChange = false;
-                            }
                         }
 
                         if (ctrl.Pause())
@@ -714,11 +726,26 @@ namespace BustinOutMegaMan
             level = lvl;
         }
 
+        //clears all of megaman's bullets
         public static void clearBullets()
         {
             foreach (Projectiles p in LiveProjectiles.ToArray())
             {
                 LiveProjectiles.Clear();
+            }
+        }
+
+        //plays the sounds
+        public static void playArrowSound(int choice)
+        {
+            if (soundBool == true)
+            {
+                if (choice == 1)
+                    arrowSoundInstance.Play();
+                else if (choice == 2)
+                    arrowSelectInstance.Play();
+                else
+                    arrowBackInstance.Play();
             }
         }
     }
