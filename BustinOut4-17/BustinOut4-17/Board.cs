@@ -394,6 +394,20 @@ namespace BustinOutMegaMan
             }
         }
 
+        public bool HitSpike(Rectangle rectangleToCheck)
+        {
+            foreach (var tile in Board.CurrentBoard.Tiles)
+            {
+
+                if (tile.Texture == SpikesDownTexture) //return true;
+
+                    if (tile.Bounds.Intersects(rectangleToCheck)) return true;
+                // if (tile.IsBlocked && new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width, (int)tile.Texture.Height).Intersects(rectangleToCheck))// && tile.Texture == SpikesDownTexture)
+                //return true;
+            }
+            return false;
+        }
+
         public bool HasRoomForRectangle(Rectangle rectangleToCheck)
         {
             foreach (var tile in Tiles)

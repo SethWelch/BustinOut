@@ -360,15 +360,13 @@ namespace BustinOutMegaMan
         //checks if megaman falls down a hole and puts him back at start
         private void CheckForPitDeath(GameTime gameTime)
         {
-            if (Position.X > 500)
+            if (Position.Y > pitDepth)
             {
                 BustinOutGame.clearBullets();
 
                 MegaManExplode(gameTime);
             }
 
-            if (Position.Y > 850)
-                Position = new Vector2(startX, startY);
         }
 
 
@@ -377,18 +375,55 @@ namespace BustinOutMegaMan
             isAlive = false;
             
             deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            
+           
             if (currentFrame <= 15)
-            
                 currentFrame = 16;
 
-                if (deathTimer > interval)
-                {
-                    currentFrame++;
+             if (deathTimer > interval)
+             {
+                 currentFrame++;
+                 deathTimer = 0f;
+             } 
+  
+            if (currentFrame >= 18) //&& (deathTimer > interval))
+            {
+                isAlive = true;
+                Position = new Vector2(startX, startY);
+            }
 
-                   deathTimer = 0f;
-                } 
         }
+
+
+       
+
+        //checks if megaman hits a spike
+        private void CheckForSpikeDeath(GameTime gameTime)
+        {
+            //sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
+            //Rectangle test = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
+            //  for (int x = 0; x < Board.CurrentBoard.Columns; x++)
+            //   for (int y = 0; y < Board.CurrentBoard.Rows; y++)
+            //     if((Board.CurrentBoard.Tiles[x, y].Texture.Name == "SpikesDownTexture") 
+            //       && sourceRect.Intersects(Board.CurrentBoard.Tiles[x,y].Bounds))
+            //for (int x = 0; x < Board.CurrentBoard.Columns; x++)
+            //for (int y = 0; y < Board.CurrentBoard.Rows; y++)  
+            // if(sourceRect.Intersects(Board.CurrentBoard.Tiles[x,y].Bounds))
+            // if(sourceRect.Intersects(Board.CurrentBoard.Tiles[28,14].Bounds))   
+            //  if(sourceRect.Intersects(Board.CurrentBoard.BlockTexture.Bounds) && Board.CurrentBoard.Tiles == "TileTexture")
+            //  MegaManExplode(gameTime);
+
+            // sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
+            // mman = new Rectangle((int)Position.X, (int)Position.Y, (int)spriteWidth, spriteHeight);
+            //onePixelLower = SourceRect;
+            //onePixelLower.Offset(0, 1);
+
+            if (Board.CurrentBoard.HitSpike(sourceRect))
+            {
+                isAlive = false;
+                MegaManExplode(gameTime);
+            }
+        }
+
         public Vector2 Position
         {
             get { return position; }

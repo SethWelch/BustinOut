@@ -351,3 +351,4 @@ C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\D
 C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\BustinOut4-17.exe
 C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\BustinOut4-17.pdb
+C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\MegaManRun.xnb

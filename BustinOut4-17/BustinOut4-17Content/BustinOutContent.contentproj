@@ -149,11 +149,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\MegaManRun.png">
-      <Name>MegaManRun</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Images\mega_man_pong.png">
       <Name>mega_man_pong</Name>
       <Importer>TextureImporter</Importer>
@@ -450,6 +445,20 @@
   <ItemGroup>
     <Compile Include="Images\bowserText.png">
       <Name>bowserText</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MegaManRun.png">
+      <Name>MegaManRun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\MegaManRun.png">
+      <Name>MegaManRun</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
