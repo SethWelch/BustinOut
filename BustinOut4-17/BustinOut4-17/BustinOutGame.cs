@@ -560,10 +560,13 @@ namespace BustinOutMegaMan
             string movementInText = string.Format("Current movement: ({0:0.0}, {1:0.0})", megaman.Movement.X, megaman.Movement.Y);
             string isOnFirmGroundText = string.Format("On firm ground? : {0}", megaman.IsOnFirmGround(source));
             string MMshooting = string.Format("Volume Level: {0}", MediaPlayer.Volume);
-
+            string collider = string.Format("Position of collider: ({0:0.0}, {1:0.0})", megaman.SourceRect.X, megaman.SourceRect.Y);
+            string isAliveText = string.Format("isAlive: {0}", megaman.IsAlive());
             DrawWithShadow(positionInText, new Vector2(10, 0));
             DrawWithShadow(movementInText, new Vector2(10, 20));
             DrawWithShadow(isOnFirmGroundText, new Vector2(10, 40));
+            DrawWithShadow(collider, new Vector2(10, 80));
+            DrawWithShadow(isAliveText, new Vector2(10, 100));
             DrawWithShadow(MMshooting, new Vector2(10, 60));
             DrawWithShadow("F5 for random board", new Vector2(10, 200));
             DrawWithShadow("Press +/- for volume", new Vector2(10, 220));

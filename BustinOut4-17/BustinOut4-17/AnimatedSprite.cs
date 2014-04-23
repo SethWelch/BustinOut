@@ -40,17 +40,20 @@ namespace BustinOutMegaMan
             this.spriteHeight = spriteHeight;
             this.jumping = false;
             this.running = false;
+            sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
         }
 
         public void Update(GameTime gameTime)
         {
+            sourceRect = new Rectangle((int)position.X, (int)position.Y, spriteWidth, spriteHeight);
             AffectWithGravity();
             SimulateFriction();
             MoveAsFarAsPossible(gameTime);
             StopMovingIfBlocked();
             WrapAcrossScreenIfNeeded();
-            CheckForPitDeath(gameTime);
             HandleSpriteMovement(gameTime);
+            CheckForPitDeath(gameTime);
+            CheckForSpikeDeath(gameTime);
         }
 
         public void AnimateRight(GameTime gameTime)
@@ -364,27 +367,30 @@ namespace BustinOutMegaMan
             {
                 BustinOutGame.clearBullets();
 
-                MegaManExplode(gameTime);
+                MegaManExplode(gameTime); // starts exploding animation
             }
 
         }
 
-
+        //plays megamans dying animation and then respawns him at the beginning of the screen
         private void MegaManExplode(GameTime gameTime)
         {
             isAlive = false;
             
-            deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds; // timer for dath intervals
            
+            //if not explision animation yet
             if (currentFrame <= 15)
-                currentFrame = 16;
+                currentFrame = 16; //then begin animation, explosion starts on frame 16
 
-             if (deathTimer > interval)
+            //cycle through animation 
+            if (deathTimer > interval)
              {
                  currentFrame++;
                  deathTimer = 0f;
              } 
   
+            //last frame of animation
             if (currentFrame >= 18) //&& (deathTimer > interval))
             {
                 isAlive = true;
@@ -393,35 +399,50 @@ namespace BustinOutMegaMan
 
         }
 
-
-       
-
         //checks if megaman hits a spike
         private void CheckForSpikeDeath(GameTime gameTime)
         {
-            //sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
-            //Rectangle test = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
-            //  for (int x = 0; x < Board.CurrentBoard.Columns; x++)
-            //   for (int y = 0; y < Board.CurrentBoard.Rows; y++)
-            //     if((Board.CurrentBoard.Tiles[x, y].Texture.Name == "SpikesDownTexture") 
-            //       && sourceRect.Intersects(Board.CurrentBoard.Tiles[x,y].Bounds))
-            //for (int x = 0; x < Board.CurrentBoard.Columns; x++)
-            //for (int y = 0; y < Board.CurrentBoard.Rows; y++)  
-            // if(sourceRect.Intersects(Board.CurrentBoard.Tiles[x,y].Bounds))
-            // if(sourceRect.Intersects(Board.CurrentBoard.Tiles[28,14].Bounds))   
-            //  if(sourceRect.Intersects(Board.CurrentBoard.BlockTexture.Bounds) && Board.CurrentBoard.Tiles == "TileTexture")
-            //  MegaManExplode(gameTime);
+            
+            Rectangle onePixelHigher = mman;
+            onePixelHigher.Offset(0, -1);
 
-            // sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
-            // mman = new Rectangle((int)Position.X, (int)Position.Y, (int)spriteWidth, spriteHeight);
-            //onePixelLower = SourceRect;
-            //onePixelLower.Offset(0, 1);
-
-            if (Board.CurrentBoard.HitSpike(sourceRect))
+            //checks for spikes above
+            if (Board.CurrentBoard.HitSpike(onePixelHigher))
             {
                 isAlive = false;
                 MegaManExplode(gameTime);
             }
+
+            //checks for spikes below
+            Rectangle onePixelLower = mman;
+            onePixelHigher.Offset(0, 1);
+
+            if (Board.CurrentBoard.HitSpike(onePixelLower))
+            {
+                isAlive = false;
+                MegaManExplode(gameTime);
+            }
+
+            //spikes to the right
+            Rectangle onePixelRight = mman;
+            onePixelHigher.Offset(1, 0);
+
+            if (Board.CurrentBoard.HitSpike(onePixelRight))
+            {
+                isAlive = false;
+                MegaManExplode(gameTime);
+            }
+
+            //spikes to the left
+            Rectangle onePixelLeft = mman;
+            onePixelHigher.Offset(-1, 0);
+
+            if (Board.CurrentBoard.HitSpike(onePixelLeft))
+            {
+                isAlive = false;
+                MegaManExplode(gameTime);
+            }
+        
         }
 
         public Vector2 Position
@@ -448,6 +469,10 @@ namespace BustinOutMegaMan
             set { sourceRect = value; }
         }
 
+        public bool IsAlive()
+        {
+            return isAlive;
+        }
         public Board Board
         {
             get

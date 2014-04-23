@@ -259,6 +259,7 @@ namespace BustinOutMegaMan
                 Tiles[38, 12].Texture = SpikesUpTexture;
                 Tiles[27, 12].IsBlocked = true;
                 Tiles[27, 12].Texture = SpikesUpTexture;
+                
                 Tiles[28, 14].IsBlocked = true;
                 Tiles[28, 14].Texture = SpikesDownTexture;
                 //Tiles[29, 14].IsBlocked = true;
@@ -394,16 +395,15 @@ namespace BustinOutMegaMan
             }
         }
 
+        //checks to see if the passed in rectangle collides with any of the spikes tiles
         public bool HitSpike(Rectangle rectangleToCheck)
         {
             foreach (var tile in Board.CurrentBoard.Tiles)
             {
-
-                if (tile.Texture == SpikesDownTexture) //return true;
-
-                    if (tile.Bounds.Intersects(rectangleToCheck)) return true;
-                // if (tile.IsBlocked && new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width, (int)tile.Texture.Height).Intersects(rectangleToCheck))// && tile.Texture == SpikesDownTexture)
-                //return true;
+                if ((tile.Texture == SpikesDownTexture || tile.Texture == SpikesUpTexture || tile.Texture == SpikesLeftTexture || tile.Texture == SpikesRightTexture) && 
+                    new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width,
+                        (int)tile.Texture.Height).Intersects(rectangleToCheck)) 
+                    return true;    
             }
             return false;
         }
