@@ -250,6 +250,15 @@ namespace BustinOutMegaMan
                 Tiles[50, 5].IsBlocked = true;
                 Tiles[50, 5].Texture = PlatformTexture;
 
+                //create wall blocking stairs
+                Tiles[10, 1].IsBlocked = true;
+                Tiles[10, 1].Texture = TileTexture;
+                Tiles[10, 2].IsBlocked = true;
+                Tiles[10, 2].Texture = TileTexture;
+                Tiles[10, 3].IsBlocked = true;
+                Tiles[10, 3].Texture = TileTexture;
+                Tiles[10, 4].IsBlocked = true;
+                Tiles[10, 4].Texture = TileTexture;
 
                 Tiles[26, 13].IsBlocked = true;
                 Tiles[26, 13].Texture = SpikesLeftTexture;

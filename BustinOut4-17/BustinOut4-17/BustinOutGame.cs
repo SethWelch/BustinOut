@@ -22,15 +22,16 @@ namespace BustinOutMegaMan
         public SpriteBatch spriteBatch;
         public static TimeSpan timeRemaining = TimeSpan.FromMinutes(20.0);
         private Texture2D tileTexture1, tileTexture2, blockTexture, platformTexture, megamanTexture, bowser,
-            spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons, bowserText;
+            spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons, bowserText, bowserText2;
         private static Texture2D ui, prison1, prison2, prison3, prisonBoss, black, stairs, mb1, mb2, mb3, mb4, pong;
         public static AnimatedSprite megaman;
-        public static bool soundBool = true, screenChange = false;
+        public static bool soundBool = true, screenChange = false, wonPong = false;
         private Board board1, board2;
         private Random rnd = new Random();
         private SpriteFont debugFont;
         private static int bgNum = 0, yCorrect = 165, level = 1, height = 900, width = 1600, currentGameState = 0;
-        private bool debugBool = false;
+        public static int interact = 0;
+        private bool debugBool = false, hasQuarter = false;
         private KeyboardState currentState, previousState;
         private static String timeString;
         Rectangle source;
@@ -140,8 +141,9 @@ namespace BustinOutMegaMan
             arrowBackInstance.Volume = volume;
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //load all of the graphics needed for in game
             viewButtons = Content.Load<Texture2D>("Images/Menus/buttonsInverted");
-            hudFont = Content.Load<SpriteFont>("Fonts/Hud");
             tileTexture1 = Content.Load<Texture2D>("Images/Objects/block");
             pong = Content.Load<Texture2D>("Images/Objects/Pong");
             tileTexture2 = Content.Load<Texture2D>("Images/Objects/mblock");
@@ -154,14 +156,24 @@ namespace BustinOutMegaMan
             spikesRightTexture = Content.Load<Texture2D>("Images/Objects/Spikes Right");
             bowser = Content.Load<Texture2D>("Images/bowser2");
             bowserText = Content.Load<Texture2D>("Images/bowserText");
+            bowserText2 = Content.Load<Texture2D>("Images/bowserText2");
             ui = Content.Load<Texture2D>("Images/UI Overlay");
+
+            //Load fonts for game
+            hudFont = Content.Load<SpriteFont>("Fonts/Hud");
+            debugFont = Content.Load<SpriteFont>("debugFont");
+            
+            //create the players character
             megaman = new AnimatedSprite(megamanTexture, 0, 60, 50);
 
             //create the levels
             board1 = new Board(1, spriteBatch, tileTexture1, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, 212, 20);
             board2 = new Board(2, spriteBatch, tileTexture2, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, 212, 20);
-            debugFont = Content.Load<SpriteFont>("debugFont");
+
+            //Set where player starts
             megaman.Position = new Vector2(100, 655);
+
+            //Create players bullets
             LiveProjectiles = new List<Projectiles>();
             Bullet = Content.Load<Texture2D>("Images/Objects/bullet");
 
@@ -237,6 +249,7 @@ namespace BustinOutMegaMan
                 Board.CurrentBoard.CreateNewBoard();
                 PutmegamanInBottomLeftCorner();
                 LiveProjectiles.Clear();
+                interact = 0;
             }
             else if (from == 1)
             {
@@ -327,7 +340,7 @@ namespace BustinOutMegaMan
                     }
                 case GameState.Pong:
                     {
-                        game.Draw(spriteBatch, timeRemaining);
+                        game.Draw(spriteBatch, timeRemaining, yCorrect, this.Window.ClientBounds.Width, this.Window.ClientBounds.Height - (yCorrect * 2));
 
                         break;
                     }
@@ -355,27 +368,73 @@ namespace BustinOutMegaMan
                         else
                             board2.Draw();
 
-
                         spriteBatch.Draw(ui, new Vector2(0, 0), Color.White);
                         if (debugBool) WriteDebugInformation();
                         DrawHud();
 
-                        for (int i = 0; i < LiveProjectiles.Count; i++)
-                        {
-                            spriteBatch.Draw(Bullet, LiveProjectiles[i].Position, null, Color.White, 0f,new Vector2(Bullet.Width/2, Bullet.Height/2), 1f, SpriteEffects.None, 0);
-                        }
-
-                        enemies.Draw(spriteBatch, bgNum, level);
-
                         //---------------------Adding Bowser-----------------------//
                         if (bgNum == 3 && level == 1)
                         {
-                            spriteBatch.Draw(bowser, new Vector2(800, 250), Color.White);
-                            spriteBatch.Draw(bowserText, new Vector2(525, 175), Color.White);
-                            spriteBatch.Draw(pong, new Vector2(600, 425), Color.White);
+                            if (hasQuarter == true)
+                            {
+                                //bowser sees that the player has a quarter and challenges him
+                                trigger(2);
+
+                                //player selects continue
+                                if (ctrl.shoot())
+                                {
+                                    //enable controls
+                                    AnimatedSprite.controlsOn = true;
+                                    interact++;
+
+                                    //start pong game
+                                    BustinOutGame.setState(8, 0);
+                                }
+                            }
+                            else
+                            {
+                                //bowser tells player to get a quarter
+                                trigger(1);
+
+                                //player selects continue
+                                if (ctrl.shoot())
+                                {
+                                    AnimatedSprite.controlsOn = true;
+                                    interact++;
+                                }
+
+                                //Debug to set player as having a quarter
+                                if (ctrl.jump())
+                                {
+                                    hasQuarter = true;
+                                }
+                            }
+                        }
+
+                        //remove wall by stairs if pong was won
+                        if (wonPong == true)
+                        {
+                            board1.Tiles[10, 1].IsBlocked = false;
+                            board1.Tiles[10, 1].Texture = null;
+                            board1.Tiles[10, 2].IsBlocked = false;
+                            board1.Tiles[10, 2].Texture = null;
+                            board1.Tiles[10, 3].IsBlocked = false;
+                            board1.Tiles[10, 3].Texture = null;
+                            board1.Tiles[10, 4].IsBlocked = false;
+                            board1.Tiles[10, 4].Texture = null;
                         }
                         //---------------------End Bowser-------------------------//
 
+                        //draw all projectiles
+                        for (int i = 0; i < LiveProjectiles.Count; i++)
+                        {
+                            spriteBatch.Draw(Bullet, LiveProjectiles[i].Position, null, Color.White, 0f, new Vector2(Bullet.Width / 2, Bullet.Height / 2), 1f, SpriteEffects.None, 0);
+                        }
+
+                        //draw all enemies
+                        enemies.Draw(spriteBatch, bgNum, level);
+
+                        //draw megaman
                         spriteBatch.Draw(megaman.Texture, megaman.Position, megaman.SourceRect, Color.White, 0f, megaman.Origin, 1.0f, SpriteEffects.None, 0);
 
                         break;
@@ -746,6 +805,31 @@ namespace BustinOutMegaMan
                     arrowSelectInstance.Play();
                 else
                     arrowBackInstance.Play();
+            }
+        }
+
+        private void trigger(int choice)
+        {
+            spriteBatch.Draw(pong, new Vector2(600, 425), Color.White);
+
+            if (choice == 1)
+            {
+                if (interact == 0)
+                {
+                    AnimatedSprite.controlsOn = false;
+                    spriteBatch.Draw(bowserText, new Vector2(525, 175), Color.White);
+                    spriteBatch.Draw(bowser, new Vector2(800, 250), Color.White);
+                }
+
+            }
+            if (choice == 2)
+            {
+                if(interact == 0)
+                {
+                    AnimatedSprite.controlsOn = false;
+                    spriteBatch.Draw(bowserText2, new Vector2(525, 175), Color.White);
+                    spriteBatch.Draw(bowser, new Vector2(800, 250), Color.White);
+                }
             }
         }
     }

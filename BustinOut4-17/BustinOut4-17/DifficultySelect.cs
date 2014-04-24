@@ -61,6 +61,7 @@ namespace BustinOutMegaMan
                 {
                     BustinOutGame.setLevel(1);
                     BustinOutGame.setState(12, 1);
+                    BustinOutGame.timeRemaining = TimeSpan.FromMinutes(40.0);
                 }
                 
                 //Normal
@@ -68,6 +69,7 @@ namespace BustinOutMegaMan
                 {
                     BustinOutGame.setLevel(1);
                     BustinOutGame.setState(12, 1);
+                    BustinOutGame.timeRemaining = TimeSpan.FromMinutes(20.0);
                 }
 
                 //Go back to title screen

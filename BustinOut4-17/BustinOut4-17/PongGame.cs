@@ -15,11 +15,12 @@ namespace BustinOutMegaMan
 {
     public class PongGame
     {
-        Texture2D ball1, ball2, paddle, paddle2, background;
+        Texture2D ball1, ball2, paddle, paddle2, background, background2, background3;
         Ball ball;
         Paddle playerone, playertwo;
         Rectangle playerrectangle, computerrectangle, ballrectangle;
-        int posSpeed = 16, negSpeed = -16, posPaddleSpeed = 16, negPaddleSpeed = -16, ballSpeed = 17, p1Score = 0, p2Score = 0, direction = 1, height, width;
+        int posSpeed = 16, negSpeed = -16, posPaddleSpeed = 16, negPaddleSpeed = -16, ballSpeed = 17, p1Score = 0, p2Score = 0, direction = 1, 
+            height, width, winning = 1, pongState = 0;
         Point start = new Point(800, 450);
         String p1 = "MegaMan", p2 = "Bowser", time = "20:00";
         SpriteFont font, font2;
@@ -35,6 +36,8 @@ namespace BustinOutMegaMan
             paddle = Content.Load<Texture2D>("Images/bowser");
             paddle2 = Content.Load<Texture2D>("Images/mega_man_pong");
             background = Content.Load<Texture2D>("Images/Backgrounds/PongBG");
+            background2 = Content.Load<Texture2D>("Images/Menus/PongIntro");
+            background3 = Content.Load<Texture2D>("Images/Menus/winner");
             font = Content.Load<SpriteFont>("Fonts/font");
             font2 = Content.Load<SpriteFont>("Fonts/font2");
             blip = Content.Load<SoundEffect>("Sounds/blip");
@@ -58,132 +61,166 @@ namespace BustinOutMegaMan
         {
             ctrl.setStates();
 
-            //Controls
-            if (ctrl.moveUp())
+            if (pongState == 0)
             {
-                playerone.ySpeed = negPaddleSpeed;
+                if (ctrl.Select())
+                {
+                    pongState = 1;
+                }
             }
-            else if (ctrl.moveDown())
+            if (pongState == 1)
             {
-                playerone.ySpeed = posPaddleSpeed;
-            }
-            else
-            {
-                playerone.ySpeed = 0;
-            }
+                //Controls
+                if (ctrl.moveUp())
+                {
+                    playerone.ySpeed = negPaddleSpeed;
+                }
+                else if (ctrl.moveDown())
+                {
+                    playerone.ySpeed = posPaddleSpeed;
+                }
+                else
+                {
+                    playerone.ySpeed = 0;
+                }
 
-            if (ctrl.Pause())
-            {
-                BustinOutGame.setState(7, 0);
-            }
+                if (ctrl.Pause())
+                {
+                    BustinOutGame.setState(7, 0);
+                }
 
-            playerone.UpdatePaddle();
-            playertwo.UpdatePaddle();
-            playerrectangle.X = (int)playerone.Position.X;
-            playerrectangle.Y = (int)playerone.Position.Y;
-            computerrectangle.X = (int)playertwo.Position.X;
-            computerrectangle.Y = (int)playertwo.Position.Y;
-            ballrectangle.X = (int)ball.Position.X;
-            ballrectangle.Y = (int)ball.Position.Y;
-            ball.UpdateBall();
+                if (p1Score == winning)
+                {
+                    pongState = 2;
+                }
 
-            //Computer scores a point
-            if (ball.Position.X <= -100)
-            {
-                speedReset();
-                p2Score++;
-                direction = 0;
-            }
-            //Player scores a point
-            else if (ball.Position.X + ball1.Width >= width - 5)
-            {
-                speedReset();
-                p1Score++;
-                direction = 1;
-            }
-            //ball hits bottom wall
-            if (ball.Position.Y + ball1.Height > height)
-            {
-                ball.ySpeed *= -1;
-            }
-            //ball hits top wall
-            else if (ball.Position.Y < 0)
-            {
-                ball.ySpeed *= -1;
-            }
+                playerone.UpdatePaddle();
+                playertwo.UpdatePaddle();
+                playerrectangle.X = (int)playerone.Position.X;
+                playerrectangle.Y = (int)playerone.Position.Y;
+                computerrectangle.X = (int)playertwo.Position.X;
+                computerrectangle.Y = (int)playertwo.Position.Y;
+                ballrectangle.X = (int)ball.Position.X;
+                ballrectangle.Y = (int)ball.Position.Y;
+                ball.UpdateBall();
 
-            //Stop player from going through top or bottom
-            if (playerone.Position.Y < 0)
-            {
-                playerone.Position.Y = 0;
-            }
-            else if (playerone.Position.Y + paddle.Height > height)
-            {
-                playerone.Position.Y = height - paddle.Height;
-            }
+                //Computer scores a point
+                if (ball.Position.X <= -100)
+                {
+                    speedReset();
+                    p2Score++;
+                    direction = 0;
+                }
+                //Player scores a point
+                else if (ball.Position.X + ball1.Width >= width - 5)
+                {
+                    speedReset();
+                    p1Score++;
+                    direction = 1;
+                }
+                //ball hits bottom wall
+                if (ball.Position.Y + ball1.Height > height)
+                {
+                    ball.ySpeed *= -1;
+                }
+                //ball hits top wall
+                else if (ball.Position.Y < 0)
+                {
+                    ball.ySpeed *= -1;
+                }
 
-            //Stop computer from going through top or bottom
-            if (playertwo.Position.Y < 0)
-            {
-                playertwo.Position.Y = 0;
-            }
-            else if (playertwo.Position.Y + paddle.Height > height)
-            {
-                playertwo.Position.Y = height - paddle.Height;
-            }
+                //Stop player from going through top or bottom
+                if (playerone.Position.Y < 0)
+                {
+                    playerone.Position.Y = 0;
+                }
+                else if (playerone.Position.Y + paddle.Height > height)
+                {
+                    playerone.Position.Y = height - paddle.Height;
+                }
 
-            //ball hits a paddle
-            if (ballrectangle.Intersects(playerrectangle))
-            {
-                ball.Position.X = playerrectangle.Right;
-                ball.xSpeed++;
-                ball.ySpeed++;
-                ball.xSpeed *= -1;
-                direction = 0;
-                blip.Play();
-            }
-            else if (ballrectangle.Intersects(computerrectangle))
-            {
-                ball.Position.X = computerrectangle.Left - ball1.Width;
-                ball.xSpeed++;
-                ball.ySpeed++;
-                ball.xSpeed *= -1;
-                direction = 1;
-                blip.Play();
-            }
+                //Stop computer from going through top or bottom
+                if (playertwo.Position.Y < 0)
+                {
+                    playertwo.Position.Y = 0;
+                }
+                else if (playertwo.Position.Y + paddle.Height > height)
+                {
+                    playertwo.Position.Y = height - paddle.Height;
+                }
 
-            //The AI for the computer (just tries to match the ball)
-            if (ball.Position.Y + ball1.Height / 2 > playertwo.Position.Y + paddle.Height / 2)
-            {
-                playertwo.ySpeed = posPaddleSpeed;
+                //ball hits a paddle
+                if (ballrectangle.Intersects(playerrectangle))
+                {
+                    ball.Position.X = playerrectangle.Right;
+                    ball.xSpeed++;
+                    ball.ySpeed++;
+                    ball.xSpeed *= -1;
+                    direction = 0;
+                    blip.Play();
+                }
+                else if (ballrectangle.Intersects(computerrectangle))
+                {
+                    ball.Position.X = computerrectangle.Left - ball1.Width;
+                    ball.xSpeed++;
+                    ball.ySpeed++;
+                    ball.xSpeed *= -1;
+                    direction = 1;
+                    blip.Play();
+                }
+
+                //The AI for the computer (just tries to match the ball)
+                if (ball.Position.Y + ball1.Height / 2 > playertwo.Position.Y + paddle.Height / 2)
+                {
+                    playertwo.ySpeed = posPaddleSpeed;
+                }
+                else if (ball.Position.Y + ball1.Height / 2 < playertwo.Position.Y + paddle.Height / 2)
+                {
+                    playertwo.ySpeed = negPaddleSpeed;
+                }
             }
-            else if (ball.Position.Y + ball1.Height / 2 < playertwo.Position.Y + paddle.Height / 2)
+            if (pongState == 2)
             {
-                playertwo.ySpeed = negPaddleSpeed;
+                if (ctrl.Select())
+                {
+                    BustinOutGame.wonPong = true;
+                    BustinOutGame.setState(4, 0);
+                }
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, TimeSpan timeRemaining)
+        public void Draw(SpriteBatch spriteBatch, TimeSpan timeRemaining, int y, int Width, int Height)
         {
-            spriteBatch.Draw(background, new Vector2(0, 0), Color.White);
+            if (pongState == 0)
+            {
+                spriteBatch.Draw(background2, new Rectangle(0, y, Width, Height), Color.White);
+            }
+            if (pongState == 1)
+            {
+                spriteBatch.Draw(background, new Vector2(0, 0), Color.White);
 
-            spriteBatch.DrawString(font, p1, fontPos, Color.LightGreen);
-            spriteBatch.DrawString(font, p2, fontPos2, Color.LightGreen);
-            spriteBatch.DrawString(font, ("" + p1Score), scorePos, Color.LightGreen);
-            spriteBatch.DrawString(font, ("" + p2Score), scorePos2, Color.LightGreen);
+                spriteBatch.DrawString(font, p1, fontPos, Color.LightGreen);
+                spriteBatch.DrawString(font, p2, fontPos2, Color.LightGreen);
+                spriteBatch.DrawString(font, ("" + p1Score), scorePos, Color.LightGreen);
+                spriteBatch.DrawString(font, ("" + p2Score), scorePos2, Color.LightGreen);
 
-            time = "" + timeRemaining.Minutes.ToString("00") + ":" + timeRemaining.Seconds.ToString("00");
+                time = "" + timeRemaining.Minutes.ToString("00") + ":" + timeRemaining.Seconds.ToString("00");
 
-            spriteBatch.DrawString(font2, time, timerPos, Color.LightGreen);
+                spriteBatch.DrawString(font2, time, timerPos, Color.LightGreen);
 
-            spriteBatch.Draw(paddle2, playerone.Position, Color.White);
+                spriteBatch.Draw(paddle2, playerone.Position, Color.White);
 
-            if (direction == 0)
-                spriteBatch.Draw(ball1, new Vector2(ball.Position.X, ball.Position.Y), Color.White);
-            else
-                spriteBatch.Draw(ball2, new Vector2(ball.Position.X, ball.Position.Y), Color.White);
+                if (direction == 0)
+                    spriteBatch.Draw(ball1, new Vector2(ball.Position.X, ball.Position.Y), Color.White);
+                else
+                    spriteBatch.Draw(ball2, new Vector2(ball.Position.X, ball.Position.Y), Color.White);
 
-            spriteBatch.Draw(paddle, playertwo.Position, Color.White);
+                spriteBatch.Draw(paddle, playertwo.Position, Color.White);
+            }
+            if (pongState == 2)
+            {
+                spriteBatch.Draw(background3, new Rectangle(0, y, Width, Height), Color.White);
+            }
         }
 
         //randomly chooses which direction the ball will go by changing the speed
