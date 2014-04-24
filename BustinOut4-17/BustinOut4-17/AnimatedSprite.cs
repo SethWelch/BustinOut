@@ -340,6 +340,8 @@ namespace BustinOutMegaMan
         //moves the board when needed
         private void MoveBoardRight()
         {
+            BustinOutGame.LiveProjectiles.Clear();
+
             BustinOutGame.screenChange = true;
 
             BustinOutGame.BGChange(1);
@@ -353,6 +355,8 @@ namespace BustinOutMegaMan
 
         private void MoveBoardLeft()
         {
+            BustinOutGame.LiveProjectiles.Clear();
+
             BustinOutGame.screenChange = true;
 
             BustinOutGame.BGChange(0);

@@ -175,3 +175,4 @@ C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Deb
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\sound.xnb
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\goBack.xnb
 C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\select.xnb
+C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\obj\x86\Debug\BustinOut.csprojResolveAssemblyReference.cache
