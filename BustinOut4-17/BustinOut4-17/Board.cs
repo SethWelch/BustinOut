@@ -410,7 +410,7 @@ namespace BustinOutMegaMan
             foreach (var tile in Board.CurrentBoard.Tiles)
             {
                 if ((tile.Texture == SpikesDownTexture || tile.Texture == SpikesUpTexture || tile.Texture == SpikesLeftTexture || tile.Texture == SpikesRightTexture) && 
-                    new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width,
+                    new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width, // creates a rectangle based off of the tile to check if it collides
                         (int)tile.Texture.Height).Intersects(rectangleToCheck)) 
                     return true;    
             }

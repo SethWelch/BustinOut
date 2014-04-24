@@ -45,15 +45,23 @@ namespace BustinOutMegaMan
 
         public void Update(GameTime gameTime)
         {
-            sourceRect = new Rectangle((int)position.X, (int)position.Y, spriteWidth, spriteHeight);
-            AffectWithGravity();
-            SimulateFriction();
-            MoveAsFarAsPossible(gameTime);
-            StopMovingIfBlocked();
-            WrapAcrossScreenIfNeeded();
-            HandleSpriteMovement(gameTime);
+            if (isAlive)
+            {
+                AffectWithGravity();
+                SimulateFriction();
+                MoveAsFarAsPossible(gameTime);
+                StopMovingIfBlocked();
+                WrapAcrossScreenIfNeeded();
+                HandleSpriteMovement(gameTime);
+            }
+            sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
+            mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
             CheckForPitDeath(gameTime);
+<<<<<<< HEAD
             //CheckForSpikeDeath(gameTime);
+=======
+            CheckForSpikeDeath(gameTime);            
+>>>>>>> origin/master
         }
 
         public void AnimateRight(GameTime gameTime)
@@ -115,10 +123,15 @@ namespace BustinOutMegaMan
         public void HandleSpriteMovement(GameTime gameTime)
         {
            
+<<<<<<< HEAD
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
             mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
 
             if (jumping && isAlive && controlsOn == true)
+=======
+           
+            if (jumping)
+>>>>>>> origin/master
             {
                 //Figures out sprite for jumping in either direction
                 if (direction == 0)
@@ -143,7 +156,7 @@ namespace BustinOutMegaMan
                 }
             }
 
-            else
+            else if (isAlive) 
             {
                 BustinOutGame.megaman.spriteHeight = 50;
                 if (ctrl.jump() && IsOnFirmGround(mman) && jumping == false && controlsOn == true)
@@ -155,7 +168,11 @@ namespace BustinOutMegaMan
             }
 
             // If shooting key is held down then he'll stay in the shooting frame
+<<<<<<< HEAD
             if (shooting && isAlive && controlsOn == true)
+=======
+            if (shooting)
+>>>>>>> origin/master
             {
                 currentTime += bulletSpeed;//(float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -167,7 +184,11 @@ namespace BustinOutMegaMan
             }
 
             //Animate Right Movement
+<<<<<<< HEAD
             if (ctrl.moveRight() && isAlive && controlsOn == true)
+=======
+            if (ctrl.moveRight())
+>>>>>>> origin/master
             {
                 running = true;
                 AnimateRight(gameTime);
@@ -178,7 +199,11 @@ namespace BustinOutMegaMan
             }
 
             // Animate Left Movement
+<<<<<<< HEAD
             if (ctrl.moveLeft() && isAlive && controlsOn == true)
+=======
+            if (ctrl.moveLeft())
+>>>>>>> origin/master
             {
                 running = true;
                 AnimateLeft(gameTime);
@@ -190,7 +215,7 @@ namespace BustinOutMegaMan
 
             // If both left and right keys are pressed stop moving, seems to always face left
             // but the main part of the guy not moving works
-            if (ctrl.moveStop() && isAlive)
+            if (ctrl.moveStop())
             {
                 if (direction == 0)
                     if (jumping)
@@ -217,7 +242,7 @@ namespace BustinOutMegaMan
             }
 
             //If just standing around then have appropriate standing sprites.
-            if (!(ctrl.doNothing() || jumping || shooting) && isAlive)
+            if (!(ctrl.doNothing() || jumping || shooting))
             {
                 running = false;
 
@@ -228,7 +253,11 @@ namespace BustinOutMegaMan
             }
 
             // Based shooting flag OP
+<<<<<<< HEAD
             if (ctrl.shoot() && isAlive && controlsOn == true)
+=======
+            if (ctrl.shoot())
+>>>>>>> origin/master
             {
                 shooting = true;
 
@@ -257,7 +286,6 @@ namespace BustinOutMegaMan
         //applies gravity
         private void AffectWithGravity()
         {   
-            if (isAlive)
                 Movement += Vector2.UnitY * gravity;
         }
 
@@ -286,7 +314,7 @@ namespace BustinOutMegaMan
         private void UpdatePositionBasedOnMovement(GameTime gameTime)
         {
             //player position
-            Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
+               Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
         }
 
         //checks if the character is on the ground, used to check if they can jump
@@ -302,7 +330,7 @@ namespace BustinOutMegaMan
         private void StopMovingIfBlocked()
         {
             Vector2 lastMovement = Position - oldPosition;
-
+           
             if (lastMovement.X == 0) //if the character's x position is the same as the x position from the previous frame
             {
                 Movement *= Vector2.UnitY; // then multiply it by Vector2.UnitY (short for Vector2(0,1); (the X movement is * 0)
@@ -349,8 +377,6 @@ namespace BustinOutMegaMan
             for (int x = 0; x < Board.CurrentBoard.Columns; x++)
                 for (int y = 0; y < Board.CurrentBoard.Rows; y++)
                     Board.CurrentBoard.Tiles[x, y].Position -= new Vector2(boardScreenSize, 0);
-
-            BustinOutGame.screenChange = false;
         }
 
         private void MoveBoardLeft()
@@ -366,8 +392,6 @@ namespace BustinOutMegaMan
             for (int x = 0; x < Board.CurrentBoard.Columns; x++)
                 for (int y = 0; y < Board.CurrentBoard.Rows; y++)
                     Board.CurrentBoard.Tiles[x, y].Position += new Vector2(boardScreenSize, 0);
-
-            BustinOutGame.screenChange = false;
         }
 
         //checks if megaman falls down a hole and puts him back at start
@@ -385,71 +409,67 @@ namespace BustinOutMegaMan
         //plays megamans dying animation and then respawns him at the beginning of the screen
         private void MegaManExplode(GameTime gameTime)
         {
-            isAlive = false;
             
-            deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds; // timer for dath intervals
+            deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds; // timer for death intervals
            
-            //if not explision animation yet
+            //if not explosion animation yet
             if (currentFrame <= 15)
+            {
                 currentFrame = 16; //then begin animation, explosion starts on frame 16
-
+                isAlive = false;
+            }
+            
             //cycle through animation 
-            if (deathTimer > interval)
+            if(currentFrame <= 18 && deathTimer > interval)
              {
                  currentFrame++;
                  deathTimer = 0f;
              } 
   
             //last frame of animation
-            if (currentFrame >= 18) //&& (deathTimer > interval))
+            if (currentFrame >= 18 && (deathTimer > interval))
             {
                 isAlive = true;
                 Position = new Vector2(startX, startY);
             }
+            
 
         }
 
         //checks if megaman hits a spike
         private void CheckForSpikeDeath(GameTime gameTime)
         {
-            
-            Rectangle onePixelHigher = mman;
-            onePixelHigher.Offset(0, -1);
 
+            Rectangle onePixelHigher = mman;  //offset for spikes above
+            onePixelHigher.Offset(0, -1);
+            Rectangle onePixelBelow = mman; //offset for spikes below
+            onePixelBelow.Offset(0, 1);
+            Rectangle onePixelRight = mman; //offset spikes to the right
+            onePixelRight.Offset(1, 0);
+            Rectangle onePixelLeft = mman; //offset for spikes to the left
+            onePixelLeft.Offset(-1, 0);
+            
             //checks for spikes above
             if (Board.CurrentBoard.HitSpike(onePixelHigher))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
 
-            //checks for spikes below
-            Rectangle onePixelLower = mman;
-            onePixelHigher.Offset(0, 1);
-
-            if (Board.CurrentBoard.HitSpike(onePixelLower))
+            //spikes below
+            if (Board.CurrentBoard.HitSpike(onePixelBelow))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
 
-            //spikes to the right
-            Rectangle onePixelRight = mman;
-            onePixelHigher.Offset(1, 0);
-
+            //spikes right
             if (Board.CurrentBoard.HitSpike(onePixelRight))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
 
-            //spikes to the left
-            Rectangle onePixelLeft = mman;
-            onePixelHigher.Offset(-1, 0);
-
+            //spikes left
             if (Board.CurrentBoard.HitSpike(onePixelLeft))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
         
@@ -483,6 +503,8 @@ namespace BustinOutMegaMan
         {
             return isAlive;
         }
+ 
+        
         public Board Board
         {
             get
