@@ -45,13 +45,17 @@ namespace BustinOutMegaMan
 
         public void Update(GameTime gameTime)
         {
-            sourceRect = new Rectangle((int)position.X, (int)position.Y, spriteWidth, spriteHeight);
-            AffectWithGravity();
-            SimulateFriction();
-            MoveAsFarAsPossible(gameTime);
-            StopMovingIfBlocked();
-            WrapAcrossScreenIfNeeded();
-            HandleSpriteMovement(gameTime);
+            if (isAlive)
+            {
+                AffectWithGravity();
+                SimulateFriction();
+                MoveAsFarAsPossible(gameTime);
+                StopMovingIfBlocked();
+                WrapAcrossScreenIfNeeded();
+                HandleSpriteMovement(gameTime);
+            }
+            sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
+            mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
             CheckForPitDeath(gameTime);
             CheckForSpikeDeath(gameTime);            
         }
@@ -115,10 +119,8 @@ namespace BustinOutMegaMan
         public void HandleSpriteMovement(GameTime gameTime)
         {
            
-            sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
-            mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
-
-            if (jumping && isAlive)
+           
+            if (jumping)
             {
                 //Figures out sprite for jumping in either direction
                 if (direction == 0)
@@ -155,7 +157,7 @@ namespace BustinOutMegaMan
             }
 
             // If shooting key is held down then he'll stay in the shooting frame
-            if (shooting && isAlive)
+            if (shooting)
             {
                 currentTime += bulletSpeed;//(float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -167,7 +169,7 @@ namespace BustinOutMegaMan
             }
 
             //Animate Right Movement
-            if (ctrl.moveRight() && isAlive)
+            if (ctrl.moveRight())
             {
                 running = true;
                 AnimateRight(gameTime);
@@ -178,7 +180,7 @@ namespace BustinOutMegaMan
             }
 
             // Animate Left Movement
-            if (ctrl.moveLeft() && isAlive)
+            if (ctrl.moveLeft())
             {
                 running = true;
                 AnimateLeft(gameTime);
@@ -190,7 +192,7 @@ namespace BustinOutMegaMan
 
             // If both left and right keys are pressed stop moving, seems to always face left
             // but the main part of the guy not moving works
-            if (ctrl.moveStop() && isAlive)
+            if (ctrl.moveStop())
             {
                 if (direction == 0)
                     if (jumping)
@@ -217,7 +219,7 @@ namespace BustinOutMegaMan
             }
 
             //If just standing around then have appropriate standing sprites.
-            if (!(ctrl.doNothing() || jumping || shooting) && isAlive)
+            if (!(ctrl.doNothing() || jumping || shooting))
             {
                 running = false;
 
@@ -228,7 +230,7 @@ namespace BustinOutMegaMan
             }
 
             // Based shooting flag OP
-            if (ctrl.shoot() && isAlive)
+            if (ctrl.shoot())
             {
                 shooting = true;
 
@@ -257,7 +259,6 @@ namespace BustinOutMegaMan
         //applies gravity
         private void AffectWithGravity()
         {   
-            if (isAlive)
                 Movement += Vector2.UnitY * gravity;
         }
 
@@ -286,8 +287,7 @@ namespace BustinOutMegaMan
         private void UpdatePositionBasedOnMovement(GameTime gameTime)
         {
             //player position
-            if(isAlive)
-                Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
+               Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
         }
 
         //checks if the character is on the ground, used to check if they can jump
@@ -303,7 +303,7 @@ namespace BustinOutMegaMan
         private void StopMovingIfBlocked()
         {
             Vector2 lastMovement = Position - oldPosition;
-
+           
             if (lastMovement.X == 0) //if the character's x position is the same as the x position from the previous frame
             {
                 Movement *= Vector2.UnitY; // then multiply it by Vector2.UnitY (short for Vector2(0,1); (the X movement is * 0)
