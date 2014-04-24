@@ -53,7 +53,7 @@ namespace BustinOutMegaMan
             WrapAcrossScreenIfNeeded();
             HandleSpriteMovement(gameTime);
             CheckForPitDeath(gameTime);
-            CheckForSpikeDeath(gameTime);
+            CheckForSpikeDeath(gameTime);            
         }
 
         public void AnimateRight(GameTime gameTime)
@@ -143,7 +143,7 @@ namespace BustinOutMegaMan
                 }
             }
 
-            else
+            else if (isAlive) 
             {
                 BustinOutGame.megaman.spriteHeight = 50;
                 if (ctrl.jump() && IsOnFirmGround(mman) && jumping == false)
@@ -286,7 +286,8 @@ namespace BustinOutMegaMan
         private void UpdatePositionBasedOnMovement(GameTime gameTime)
         {
             //player position
-            Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
+            if(isAlive)
+                Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
         }
 
         //checks if the character is on the ground, used to check if they can jump
@@ -375,27 +376,30 @@ namespace BustinOutMegaMan
         //plays megamans dying animation and then respawns him at the beginning of the screen
         private void MegaManExplode(GameTime gameTime)
         {
-            isAlive = false;
             
-            deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds; // timer for dath intervals
+            deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds; // timer for death intervals
            
-            //if not explision animation yet
+            //if not explosion animation yet
             if (currentFrame <= 15)
+            {
                 currentFrame = 16; //then begin animation, explosion starts on frame 16
-
+                isAlive = false;
+            }
+            
             //cycle through animation 
-            if (deathTimer > interval)
+            if(currentFrame <= 18 && deathTimer > interval)
              {
                  currentFrame++;
                  deathTimer = 0f;
              } 
   
             //last frame of animation
-            if (currentFrame >= 18) //&& (deathTimer > interval))
+            if (currentFrame >= 18 && (deathTimer > interval))
             {
                 isAlive = true;
                 Position = new Vector2(startX, startY);
             }
+            
 
         }
 
@@ -403,10 +407,10 @@ namespace BustinOutMegaMan
         private void CheckForSpikeDeath(GameTime gameTime)
         {
 
-            Rectangle onePixelHigher = mman;  //offset for spikes to the right
+            Rectangle onePixelHigher = mman;  //offset for spikes above
             onePixelHigher.Offset(0, -1);
-            Rectangle onePixelLower = mman; //offset for spikes below
-            onePixelLower.Offset(0, 1);
+            Rectangle onePixelBelow = mman; //offset for spikes below
+            onePixelBelow.Offset(0, 1);
             Rectangle onePixelRight = mman; //offset spikes to the right
             onePixelRight.Offset(1, 0);
             Rectangle onePixelLeft = mman; //offset for spikes to the left
@@ -415,28 +419,24 @@ namespace BustinOutMegaMan
             //checks for spikes above
             if (Board.CurrentBoard.HitSpike(onePixelHigher))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
 
             //spikes below
-            if (Board.CurrentBoard.HitSpike(onePixelLower))
+            if (Board.CurrentBoard.HitSpike(onePixelBelow))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
 
             //spikes right
             if (Board.CurrentBoard.HitSpike(onePixelRight))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
 
             //spikes left
             if (Board.CurrentBoard.HitSpike(onePixelLeft))
             {
-                isAlive = false;
                 MegaManExplode(gameTime);
             }
         
@@ -470,6 +470,8 @@ namespace BustinOutMegaMan
         {
             return isAlive;
         }
+ 
+        
         public Board Board
         {
             get
