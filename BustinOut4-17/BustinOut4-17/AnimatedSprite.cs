@@ -57,11 +57,7 @@ namespace BustinOutMegaMan
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
             mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
             CheckForPitDeath(gameTime);
-<<<<<<< HEAD
-            //CheckForSpikeDeath(gameTime);
-=======
             CheckForSpikeDeath(gameTime);            
->>>>>>> origin/master
         }
 
         public void AnimateRight(GameTime gameTime)
@@ -122,16 +118,10 @@ namespace BustinOutMegaMan
 
         public void HandleSpriteMovement(GameTime gameTime)
         {
-           
-<<<<<<< HEAD
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
             mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
 
-            if (jumping && isAlive && controlsOn == true)
-=======
-           
-            if (jumping)
->>>>>>> origin/master
+            if (jumping && controlsOn == true)
             {
                 //Figures out sprite for jumping in either direction
                 if (direction == 0)
@@ -168,11 +158,7 @@ namespace BustinOutMegaMan
             }
 
             // If shooting key is held down then he'll stay in the shooting frame
-<<<<<<< HEAD
-            if (shooting && isAlive && controlsOn == true)
-=======
-            if (shooting)
->>>>>>> origin/master
+            if (shooting && controlsOn == true)
             {
                 currentTime += bulletSpeed;//(float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -184,11 +170,7 @@ namespace BustinOutMegaMan
             }
 
             //Animate Right Movement
-<<<<<<< HEAD
-            if (ctrl.moveRight() && isAlive && controlsOn == true)
-=======
-            if (ctrl.moveRight())
->>>>>>> origin/master
+            if (ctrl.moveRight() && controlsOn == true)
             {
                 running = true;
                 AnimateRight(gameTime);
@@ -199,11 +181,7 @@ namespace BustinOutMegaMan
             }
 
             // Animate Left Movement
-<<<<<<< HEAD
-            if (ctrl.moveLeft() && isAlive && controlsOn == true)
-=======
-            if (ctrl.moveLeft())
->>>>>>> origin/master
+            if (ctrl.moveLeft() && controlsOn == true)
             {
                 running = true;
                 AnimateLeft(gameTime);
@@ -253,11 +231,7 @@ namespace BustinOutMegaMan
             }
 
             // Based shooting flag OP
-<<<<<<< HEAD
-            if (ctrl.shoot() && isAlive && controlsOn == true)
-=======
-            if (ctrl.shoot())
->>>>>>> origin/master
+            if (ctrl.shoot() && controlsOn == true)
             {
                 shooting = true;
 
@@ -472,7 +446,6 @@ namespace BustinOutMegaMan
             {
                 MegaManExplode(gameTime);
             }
-        
         }
 
         public Vector2 Position

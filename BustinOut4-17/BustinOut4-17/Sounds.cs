@@ -18,7 +18,7 @@ namespace BustinOutMegaMan
         private static Vector2 arrowPosition6 = new Vector2(910, 350);
         private static Vector2 position = arrowPosition;
         private static int option = 0, optionX = 0, optionY = 0;
-        private static int musicV = 2, soundV = 1;
+        private static int musicV = 1, soundV = 1;
 
         PlayerControls ctrl = new PlayerControls();
 
