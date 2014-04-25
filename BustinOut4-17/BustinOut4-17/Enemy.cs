@@ -67,7 +67,7 @@ namespace BustinOutMegaMan
             currentFrame = 0;
             aliveFrameInterval = 150;
             deathFrameInterval = 150;
-            shootInterval = 600;
+            shootInterval = 1200;
             type = (EnemyType)enemyType;
             spriteSet = spriteName;
             moveSpeed = speed;
@@ -150,7 +150,10 @@ namespace BustinOutMegaMan
                 }
 
                 if (position.Y > pit)
+                {
                     isAlive = false;
+                    currentFrame = 0;
+                }
 
 
 
@@ -266,6 +269,22 @@ namespace BustinOutMegaMan
 
                 }
             }
+
+            if (BustinOutGame.megaman.IsAlive())
+            {
+                foreach (Projectiles b in enemyProjectiles.ToArray())
+                {
+                    if (b.Position.X > BustinOutGame.megaman.Position.X && b.Position.X < BustinOutGame.megaman.Position.X + BustinOutGame.megaman.SourceRect.Width &&
+                        b.Position.Y > BustinOutGame.megaman.Position.Y && b.Position.Y < BustinOutGame.megaman.Position.Y + BustinOutGame.megaman.SourceRect.Height)
+                    {
+                        BustinOutGame.megaman.isAlive = false;
+                        enemyProjectiles.RemoveAt(enemyProjectiles.IndexOf(b));
+                    }
+
+                }
+            }
+            
+
         }
 
         private void shootBullets(GameTime gameTime)
@@ -313,7 +332,6 @@ namespace BustinOutMegaMan
 
             }
 
-
             foreach (Projectiles p in enemyProjectiles.ToArray())
             {
                 p.Position += p.Velocity;
@@ -331,6 +349,7 @@ namespace BustinOutMegaMan
                 }
             }
 
+            
 
         }
 
