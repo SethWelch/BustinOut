@@ -19,7 +19,8 @@ namespace BustinOutMegaMan
         public static int direction = 1;
         Rectangle sourceRect;
         Vector2 position, origin;
-        bool jumping, running, isAlive = true;
+        bool jumping, running; 
+        public bool isAlive = true;
         public static bool shooting = false, controlsOn = true;
 
         //for megaman
@@ -381,7 +382,7 @@ namespace BustinOutMegaMan
         }
 
         //plays megamans dying animation and then respawns him at the beginning of the screen
-        private void MegaManExplode(GameTime gameTime)
+        public void MegaManExplode(GameTime gameTime)
         {
             
             deathTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds; // timer for death intervals
