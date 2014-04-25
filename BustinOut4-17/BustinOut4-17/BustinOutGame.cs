@@ -611,12 +611,6 @@ namespace BustinOutMegaMan
                             {
                                 LiveProjectiles.RemoveAt(LiveProjectiles.IndexOf(p));
                             }
-
-                            if (screenChange == true)
-                            {
-                                LiveProjectiles.Clear();
-                                screenChange = false;
-                            }
                         }
 
                         if (ctrl.Pause())
