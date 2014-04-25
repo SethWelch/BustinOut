@@ -399,7 +399,7 @@ namespace BustinOutMegaMan
                                 trigger(1);
 
                                 //player selects continue
-                                if (ctrl.shoot())
+                                if (ctrl.shoot() && wonPong == false)
                                 {
                                     AnimatedSprite.controlsOn = true;
                                     interact++;
@@ -610,12 +610,6 @@ namespace BustinOutMegaMan
                             if (p.Position.X < 0 || p.Position.X > graphics.GraphicsDevice.Viewport.Width || p.Position.Y < 0 || p.Position.Y > graphics.GraphicsDevice.Viewport.Height)
                             {
                                 LiveProjectiles.RemoveAt(LiveProjectiles.IndexOf(p));
-                            }
-
-                            if (screenChange == true)
-                            {
-                                LiveProjectiles.Clear();
-                                screenChange = false;
                             }
                         }
 
