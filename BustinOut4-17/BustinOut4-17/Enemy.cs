@@ -33,6 +33,8 @@ namespace BustinOutMegaMan
         bool isAlive;
         bool hasDied;
 
+        int firstFrame, lastLivingFrame, lastDeathFrame;
+
         int pit;
 
         Animation aliveAnimation = new Animation();
@@ -76,6 +78,10 @@ namespace BustinOutMegaMan
             direction = FaceDirection.Left;
             pit = 860;
 
+            firstFrame = 0;
+            lastLivingFrame = 9;
+            lastDeathFrame = 3;
+
             enemyProjectiles = new List<Projectiles>();
             shootSpeed = 10;
         }
@@ -102,8 +108,8 @@ namespace BustinOutMegaMan
                 {
                     currentFrame++;
 
-                    if (currentFrame > 9)
-                        currentFrame = 0;
+                    if (currentFrame > lastLivingFrame)
+                        currentFrame = firstFrame;
 
                     timer -= aliveFrameInterval;
 
@@ -121,6 +127,11 @@ namespace BustinOutMegaMan
                         }
                         position.X += (int)direction * moveSpeed;
 
+                        if (shootTimer > shootInterval)
+                        {
+                            shootBullets();
+                            shootTimer -= shootInterval;
+                        }
 
                         break;
                     // just runs left type
@@ -130,8 +141,13 @@ namespace BustinOutMegaMan
                         {
                             direction = (FaceDirection)(-(int)direction);
                         }
-
                         position.X += (int)direction * moveSpeed;
+
+                        if (shootTimer > shootInterval)
+                        {
+                            shootBullets();
+                            shootTimer -= shootInterval;
+                        }
 
                         break;
                 }
@@ -153,7 +169,7 @@ namespace BustinOutMegaMan
                 if (position.Y > pit)
                 {
                     isAlive = false;
-                    currentFrame = 0;
+                    currentFrame = firstFrame;
                 }
 
 
@@ -171,7 +187,7 @@ namespace BustinOutMegaMan
 
                 if (timer > deathFrameInterval)
                 {
-                    if (currentFrame < 4)
+                    if (currentFrame <= lastDeathFrame)
                     {
                         currentFrame++;
                         deathAnimation.CurrentFrame = currentFrame;
@@ -186,11 +202,7 @@ namespace BustinOutMegaMan
 
             }
 
-            if (shootTimer > shootInterval)
-            {
-                shootBullets();
-                shootTimer -= shootInterval;
-            }
+            
             foreach (Projectiles p in enemyProjectiles.ToArray())
             {
                 p.Position += p.Velocity;
@@ -292,9 +304,6 @@ namespace BustinOutMegaMan
         {
             //if player is to the left and on the same level and
             //if the enemy is facing them shoot a bullet
-
-            
-
             Projectiles enemyBullet = new Projectiles();
 
             if (BustinOutGame.megaman.Position.X < position.X && direction == FaceDirection.Left)
@@ -311,6 +320,9 @@ namespace BustinOutMegaMan
                 }
 
             }
+
+            //if player is to the right and on the same level and
+            //if the enemy is facing them shoot a bullet
 
             if (BustinOutGame.megaman.Position.X > position.X && direction == FaceDirection.Right)
             {
