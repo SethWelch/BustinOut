@@ -211,6 +211,9 @@ namespace BustinOutMegaMan
             CheckKeyboardAndReact();
             source = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, 60, 50);
             ctrl.setStates();
+
+            if (!megaman.IsAlive())
+                megaman.MegaManExplode(gameTime);
         }
 
         private void CheckKeyboardAndReact()
