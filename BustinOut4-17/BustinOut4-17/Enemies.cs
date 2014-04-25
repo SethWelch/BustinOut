@@ -26,7 +26,7 @@ namespace BustinOutMegaMan
             enemies1.Add(new Enemy(1, "Enemy1A", 1050, 285, 1000, 3));
             enemies1.Add(new Enemy(1, "Enemy1A", 750, 285, 850, 2));
             enemies1.Add(new Enemy(1, "Enemy1A", 450, 285, 1350, 1));
-            
+
             enemies2.Add(new Enemy(1, "Enemy1A", 450, 285, 850, 2));
             enemies2.Add(new Enemy(1, "Enemy1A", 1240, 285, 1300, 2));
             enemies2.Add(new Enemy(2, "Enemy1B", 1550, 685, 0, 3));
@@ -41,7 +41,7 @@ namespace BustinOutMegaMan
             enemies3.Add(new Enemy(2, "Enemy1B", 1500, 700, 0, 3));
             enemies3.Add(new Enemy(1, "Enemy1A", 965, 720, 1500, 3));
 
-            
+
             foreach (Enemy e in enemies1.ToArray())
             {
                 e.LoadContent(Content);
@@ -64,6 +64,11 @@ namespace BustinOutMegaMan
         {
             if (bgNum == 0)
             {
+                foreach (Enemy e in enemies2.ToArray())
+                {
+                    e.enemyProjectiles.Clear();
+                }
+
                 foreach (Enemy e in enemies1.ToArray())
                 {
                     e.Update(gameTime);
@@ -77,6 +82,16 @@ namespace BustinOutMegaMan
             }
             else if (bgNum == 1)
             {
+                foreach (Enemy e in enemies1.ToArray())
+                {
+                    e.enemyProjectiles.Clear();
+                }
+
+                foreach (Enemy e in enemies3.ToArray())
+                {
+                    e.enemyProjectiles.Clear();
+                }
+
                 foreach (Enemy e in enemies2.ToArray())
                 {
                     e.Update(gameTime);
@@ -89,6 +104,12 @@ namespace BustinOutMegaMan
             }
             else if (bgNum == 2)
             {
+
+                foreach (Enemy e in enemies2.ToArray())
+                {
+                    e.enemyProjectiles.Clear();
+                }
+
                 foreach (Enemy e in enemies3.ToArray())
                 {
                     e.Update(gameTime);
@@ -100,7 +121,7 @@ namespace BustinOutMegaMan
                 }
             }
 
-            
+
 
         }
 

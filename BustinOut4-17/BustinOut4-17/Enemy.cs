@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 //This looks similar to the previous AnimatedSprite but
@@ -30,6 +32,8 @@ namespace BustinOutMegaMan
         Rectangle bounds;
         bool isAlive;
         bool hasDied;
+
+        int pit;
 
         Animation aliveAnimation = new Animation();
         Animation deathAnimation = new Animation();
@@ -62,14 +66,15 @@ namespace BustinOutMegaMan
 
             currentFrame = 0;
             aliveFrameInterval = 150;
-            deathFrameInterval = 300;
-            shootInterval = 300;
+            deathFrameInterval = 150;
+            shootInterval = 600;
             type = (EnemyType)enemyType;
             spriteSet = spriteName;
             moveSpeed = speed;
             isAlive = true;
             hasDied = false;
             direction = FaceDirection.Left;
+            pit = 860;
 
             enemyProjectiles = new List<Projectiles>();
             shootSpeed = 10;
@@ -100,7 +105,7 @@ namespace BustinOutMegaMan
                         currentFrame = 0;
 
                     timer -= aliveFrameInterval;
-                    
+
                 }
 
 
@@ -130,7 +135,7 @@ namespace BustinOutMegaMan
                         break;
                 }
 
-                
+
 
                 //check if the enemy should be falling
                 if (!IsOnFirmGround(new Rectangle((int)position.X - aliveAnimation.spriteWidth, (int)position.Y - aliveAnimation.spriteHeight,
@@ -143,6 +148,11 @@ namespace BustinOutMegaMan
                 {
                     direction = (FaceDirection)(-(int)direction);
                 }
+
+                if (position.Y > pit)
+                    isAlive = false;
+
+
 
                 aliveAnimation.Direction = (int)direction;
                 aliveAnimation.CurrentFrame = currentFrame;
@@ -176,14 +186,9 @@ namespace BustinOutMegaMan
         public void Draw(SpriteBatch spriteBatch)
         {
             if (isAlive)
-            {
                 aliveAnimation.Draw(spriteBatch);
-            }
             else
-            {
-
                 deathAnimation.Draw(spriteBatch);
-            }
 
             for (int i = 0; i < enemyProjectiles.Count; i++)
             {
@@ -195,7 +200,8 @@ namespace BustinOutMegaMan
         //this method creates the gravity for the enemies
         private void affectWithGravity()
         {
-            position += Vector2.UnitY * 9f;
+            if (isAlive)
+                position += Vector2.UnitY * 9f;
         }
 
         //this method checks to see if the enemy should fall
@@ -227,35 +233,38 @@ namespace BustinOutMegaMan
 
         public void checkCollisions(List<Projectiles> bullets)
         {
-
-            foreach (Projectiles b in bullets.ToArray())
+            if (isAlive)
             {
-                if (BustinOutGame.megaman.Position.X < position.X)
+                foreach (Projectiles b in bullets.ToArray())
                 {
-                    if (b.Position.X > position.X - aliveAnimation.spriteWidth)
+                    if (BustinOutGame.megaman.Position.X < position.X)
                     {
-                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - aliveAnimation.spriteHeight)
+                        if (b.Position.X > position.X - aliveAnimation.spriteWidth)
                         {
-                            bullets.RemoveAt(bullets.IndexOf(b));
-                            isAlive = false;
-                            currentFrame = 0;
+                            if (b.Position.Y < position.Y && b.Position.Y > position.Y - aliveAnimation.spriteHeight)
+                            {
+                                bullets.RemoveAt(bullets.IndexOf(b));
+                                isAlive = false;
+                                currentFrame = 0;
+
+                            }
                         }
                     }
-                }
-                else
-                {
-                    if (b.Position.X < position.X)
+                    else
                     {
-                        if (b.Position.Y < position.Y && b.Position.Y > position.Y - aliveAnimation.spriteHeight)
+                        if (b.Position.X < position.X)
                         {
-                            bullets.RemoveAt(bullets.IndexOf(b));
-                            isAlive = false;
-                            currentFrame = 0;
+                            if (b.Position.Y < position.Y && b.Position.Y > position.Y - aliveAnimation.spriteHeight)
+                            {
+                                bullets.RemoveAt(bullets.IndexOf(b));
+                                isAlive = false;
+                                currentFrame = 0;
+
+                            }
                         }
                     }
+
                 }
-
-
             }
         }
 
@@ -270,7 +279,7 @@ namespace BustinOutMegaMan
 
             if (BustinOutGame.megaman.Position.X < position.X && direction == FaceDirection.Left)
             {
-                if (BustinOutGame.megaman.Position.Y <= position.Y &&  BustinOutGame.megaman.Position.Y >= position.Y - aliveAnimation.spriteHeight)
+                if (BustinOutGame.megaman.Position.Y <= position.Y && BustinOutGame.megaman.Position.Y >= position.Y - aliveAnimation.spriteHeight)
                 {
                     enemyBullet.Position = new Vector2((position.X - aliveAnimation.spriteWidth), (position.Y - (aliveAnimation.spriteHeight / 2)));
                     enemyBullet.Velocity = new Vector2(shootSpeed * (int)direction, 0);
@@ -290,7 +299,7 @@ namespace BustinOutMegaMan
             {
                 if (BustinOutGame.megaman.Position.Y <= position.Y && BustinOutGame.megaman.Position.Y >= position.Y - aliveAnimation.spriteHeight)
                 {
-                    enemyBullet.Position = new Vector2(position.X , (position.Y - (aliveAnimation.spriteHeight / 2)));
+                    enemyBullet.Position = new Vector2(position.X, (position.Y - (aliveAnimation.spriteHeight / 2)));
                     enemyBullet.Velocity = new Vector2(shootSpeed * (int)direction, 0);
                     enemyBullet.bound = new Rectangle((int)enemyBullet.Position.X, (int)enemyBullet.Position.Y, bullet.Width, bullet.Height);
 
