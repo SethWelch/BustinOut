@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\MegaManRun.xnb</Output>
-      <Time>2014-04-23T23:58:32.4761667-06:00</Time>
+      <Time>2014-04-24T04:26:46.1174828-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mega_man_pong.png</Source>
@@ -683,7 +683,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb</Output>
-      <Time>2014-04-24T01:15:28.1396684-06:00</Time>
+      <Time>2014-04-24T04:27:00.0607588-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Mario.mp3</Source>
@@ -731,7 +731,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\sound.xnb</Output>
-      <Time>2014-04-24T04:03:29.4656706-06:00</Time>
+      <Time>2014-04-24T04:27:00.0677654-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\goBack.wav</Source>
@@ -740,7 +740,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\goBack.xnb</Output>
-      <Time>2014-04-24T04:03:26.7933825-06:00</Time>
+      <Time>2014-04-24T04:27:00.0637619-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\select.wav</Source>
@@ -749,7 +749,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\select.xnb</Output>
-      <Time>2014-04-24T04:03:28.0967426-06:00</Time>
+      <Time>2014-04-24T04:27:00.0657637-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowserText2.png</Source>
@@ -758,7 +758,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText2.xnb</Output>
-      <Time>2014-04-24T01:36:04.6374091-06:00</Time>
+      <Time>2014-04-24T04:27:00.0607588-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\PongIntro.png</Source>
@@ -767,7 +767,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\PongIntro.xnb</Output>
-      <Time>2014-04-24T01:53:12.6315062-06:00</Time>
+      <Time>2014-04-24T04:27:00.0427418-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\winner.png</Source>
@@ -776,7 +776,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Seth\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\winner.xnb</Output>
-      <Time>2014-04-24T02:17:13.5433298-06:00</Time>
+      <Time>2014-04-24T04:27:00.0527515-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

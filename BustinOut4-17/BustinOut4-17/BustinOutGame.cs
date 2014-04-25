@@ -31,7 +31,7 @@ namespace BustinOutMegaMan
         private SpriteFont debugFont;
         private static int bgNum = 0, yCorrect = 165, level = 1, height = 900, width = 1600, currentGameState = 0;
         public static int interact = 0;
-        private bool debugBool = false, hasQuarter = false;
+        private static bool debugBool = false, hasQuarter = false;
         private KeyboardState currentState, previousState;
         private static String timeString;
         Rectangle source;
@@ -248,9 +248,7 @@ namespace BustinOutMegaMan
             {
                 Board.CurrentBoard.CreateNewBoard();
                 PutmegamanInBottomLeftCorner();
-                LiveProjectiles.Clear();
-                interact = 0;
-                screenChange = true;
+                resetVariables();
             }
             else if (from == 1)
             {
@@ -382,7 +380,7 @@ namespace BustinOutMegaMan
                                 trigger(2);
 
                                 //player selects continue
-                                if (ctrl.shoot())
+                                if (ctrl.shoot() && wonPong == false)
                                 {
                                     //enable controls
                                     AnimatedSprite.controlsOn = true;
@@ -822,7 +820,7 @@ namespace BustinOutMegaMan
         {
             spriteBatch.Draw(pong, new Vector2(600, 425), Color.White);
 
-            if (choice == 1)
+            if (choice == 1 && wonPong == false)
             {
                 if (interact == 0)
                 {
@@ -830,9 +828,8 @@ namespace BustinOutMegaMan
                     spriteBatch.Draw(bowserText, new Vector2(525, 175), Color.White);
                     spriteBatch.Draw(bowser, new Vector2(800, 250), Color.White);
                 }
-
             }
-            if (choice == 2)
+            if (choice == 2 && wonPong == false)
             {
                 if(interact == 0)
                 {
@@ -841,6 +838,14 @@ namespace BustinOutMegaMan
                     spriteBatch.Draw(bowser, new Vector2(800, 250), Color.White);
                 }
             }
+        }
+
+        private static void resetVariables()
+        {
+            hasQuarter = false;
+            screenChange = false;
+            interact = 0;
+            LiveProjectiles.Clear();
         }
     }
 }
