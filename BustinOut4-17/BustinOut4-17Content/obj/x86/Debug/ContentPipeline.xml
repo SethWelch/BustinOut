@@ -683,7 +683,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText.xnb</Output>
-      <Time>2014-04-27T11:41:20.2944495-06:00</Time>
+      <Time>2014-04-27T12:30:44.4159875-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bowserText2.png</Source>
@@ -692,7 +692,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\bowserText2.xnb</Output>
-      <Time>2014-04-27T11:41:20.2954495-06:00</Time>
+      <Time>2014-04-27T12:30:44.4159875-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\PongIntro.png</Source>
@@ -701,7 +701,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\PongIntro.xnb</Output>
-      <Time>2014-04-27T11:41:20.2394463-06:00</Time>
+      <Time>2014-04-27T12:30:44.3949863-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Menus\winner.png</Source>
@@ -710,7 +710,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\Menus\winner.xnb</Output>
-      <Time>2014-04-27T11:41:20.2534471-06:00</Time>
+      <Time>2014-04-27T12:30:44.4079871-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Mario.mp3</Source>
@@ -758,7 +758,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\sound.xnb</Output>
-      <Time>2014-04-27T11:41:20.3014499-06:00</Time>
+      <Time>2014-04-27T12:30:44.4219879-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\goBack.wav</Source>
@@ -767,7 +767,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\goBack.xnb</Output>
-      <Time>2014-04-27T11:41:20.2974496-06:00</Time>
+      <Time>2014-04-27T12:30:44.4189877-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\select.wav</Source>
@@ -776,7 +776,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Sounds\select.xnb</Output>
-      <Time>2014-04-27T11:41:20.2994498-06:00</Time>
+      <Time>2014-04-27T12:30:44.4199878-06:00</Time>
     </Item>
     <Item>
       <Source>Images\quarter.png</Source>
@@ -785,7 +785,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\MACDRE\Documents\GitHub\BustinOut\BustinOut4-17\BustinOut4-17\bin\x86\Debug\Content\Images\quarter.xnb</Output>
-      <Time>2014-04-27T11:44:32.3964371-06:00</Time>
+      <Time>2014-04-27T12:30:44.4169876-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
