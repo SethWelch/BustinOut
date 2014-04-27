@@ -54,6 +54,7 @@ namespace BustinOutMegaMan
                 StopMovingIfBlocked();
                 WrapAcrossScreenIfNeeded();
                 HandleSpriteMovement(gameTime);
+                CheckForBlockHit(gameTime);
             }
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
             mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
@@ -447,6 +448,14 @@ namespace BustinOutMegaMan
             {
                 MegaManExplode(gameTime);
             }
+        }
+
+        private void CheckForBlockHit(GameTime gameTime)
+        {
+            Rectangle onePixelHigher = mman;  
+            onePixelHigher.Offset(0, -1);
+
+            Board.CurrentBoard.ShowPowerUp(onePixelHigher);
         }
 
         public Vector2 Position

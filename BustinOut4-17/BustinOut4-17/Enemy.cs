@@ -161,7 +161,7 @@ namespace BustinOutMegaMan
                     affectWithGravity();
                 }
 
-                if (Board.CurrentBoard.bumpedIntoBlock(new Rectangle((int)position.X - aliveAnimation.spriteWidth, (int)position.Y - 20, aliveAnimation.spriteWidth, 1)))
+                if (Board.CurrentBoard.BumpedIntoBlock(new Rectangle((int)position.X - aliveAnimation.spriteWidth, (int)position.Y - 20, aliveAnimation.spriteWidth, 1)))
                 {
                     direction = (FaceDirection)(-(int)direction);
                 }

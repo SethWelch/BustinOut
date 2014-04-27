@@ -21,6 +21,7 @@ namespace BustinOutMegaMan
         public Texture2D SpikesDownTexture { get; set; }
         public Texture2D SpikesLeftTexture { get; set; }
         public Texture2D SpikesRightTexture { get; set; }
+        public Texture2D PowerUpTexture { get; set; }
         private SpriteBatch SpriteBatch { get; set; }
         private Random _rnd = new Random();
         public static Board CurrentBoard { get; set; }
@@ -35,7 +36,7 @@ namespace BustinOutMegaMan
 
 
         public Board(int level, SpriteBatch spritebatch, Texture2D tileTexture, Texture2D blockTexture, Texture2D platformTexture,
-             Texture2D spikesUpTexture, Texture2D spikesDownTexture, Texture2D spikesLeftTexture, Texture2D spikesRightTexture, int columns, int rows)
+             Texture2D spikesUpTexture, Texture2D spikesDownTexture, Texture2D spikesLeftTexture, Texture2D spikesRightTexture, Texture2D powerUpTexture, int columns, int rows)
         {
             this.level = level;
             Columns = columns;
@@ -48,6 +49,7 @@ namespace BustinOutMegaMan
             SpikesLeftTexture = spikesLeftTexture;
             SpikesRightTexture = spikesRightTexture;
             SpriteBatch = spritebatch;
+            PowerUpTexture = powerUpTexture;
             Tiles = new Tile[Columns, Rows];
             CreateNewBoard();
             Board.CurrentBoard = this;
@@ -130,98 +132,7 @@ namespace BustinOutMegaMan
 
         private void BuildLevel()
         {
-            if (level == 2)
-            {
-                    //-------------------------------------------------Screen 1----------------------------------------------------------------
-                    //-------------------------------------------------0<X<~48-------------------------------------------------------------------                
-
-                    
-                    Tiles[5, 5].IsBlocked = true;
-                    Tiles[5, 5].Texture = BlockTexture;
-                    Tiles[10,5].IsBlocked = true;
-                    Tiles[10, 5].Texture = BlockTexture;
-                    Tiles[15, 8].IsBlocked = true;
-                    Tiles[15, 8].Texture = BlockTexture;
-                    Tiles[20, 5].IsBlocked = true;
-                    Tiles[20, 5].Texture = BlockTexture;
-                    Tiles[25, 5].IsBlocked = true;
-                    Tiles[25, 5].Texture = BlockTexture;
-                    Tiles[30, 5].IsBlocked = true;
-                    Tiles[30, 5].Texture = BlockTexture;
-                    Tiles[35, 8].IsBlocked = true;
-                    Tiles[35, 8].Texture = BlockTexture;
-                    Tiles[40, 5].IsBlocked = true;
-                    Tiles[40, 5].Texture = BlockTexture;
-                    Tiles[45, 8].IsBlocked = true;
-                    Tiles[45, 8].Texture = BlockTexture;
-                    Tiles[50, 5].IsBlocked = true;
-                    Tiles[50, 5].Texture = BlockTexture;
-
-
-                    Tiles[26, 13].IsBlocked = true;
-                    Tiles[26, 13].Texture = BlockTexture;
-                    Tiles[39, 13].IsBlocked = true;
-                    Tiles[39, 13].Texture = BlockTexture;
-                    Tiles[38, 12].IsBlocked = true;
-                    
-
-                    //-----------------------------------------------Screen 2--------------------------------------------------------------------
-                    //-----------------------------------------------~48<X<~102----------------------------------------------------------------------
-                    Tiles[55, 5].IsBlocked = true;
-                    Tiles[55, 5].Texture = BlockTexture;
-                    Tiles[60, 5].IsBlocked = true;
-                    Tiles[60, 5].Texture = BlockTexture;
-                    Tiles[65, 5].IsBlocked = true;
-                    Tiles[65, 5].Texture = BlockTexture;
-                    Tiles[70, 5].IsBlocked = true;
-                    Tiles[70, 5].Texture = BlockTexture;
-                    Tiles[75, 5].IsBlocked = true;
-                    Tiles[75, 5].Texture = BlockTexture;
-                    Tiles[80, 5].IsBlocked = true;
-                    Tiles[80, 5].Texture = BlockTexture;
-                    Tiles[85, 5].IsBlocked = true;
-                    Tiles[85, 5].Texture = BlockTexture;
-                    Tiles[90, 5].IsBlocked = true;
-                    Tiles[90, 5].Texture = BlockTexture;
-                    Tiles[95, 5].IsBlocked = true;
-                    Tiles[95, 5].Texture = BlockTexture;
-                    Tiles[100,5].IsBlocked = true;
-                    Tiles[100, 5].Texture = BlockTexture;
-                    
-                    //-----------------------------------------------Screen 3--------------------------------------------------------------------
-                    //-----------------------------------------------102<X<154-------------------------------------------------------------------
-
-                    
-               
-
-                    //---------------------------------------------Boss Screen------------------------------------------------------------------
-                    //---------------------------------------------~155<X<205-------------------------------------------------------------------
-
-                    Tiles[160, 5].IsBlocked = true;
-                    Tiles[160, 5].Texture = PlatformTexture;
-                    Tiles[165, 5].IsBlocked = true;
-                    Tiles[165, 5].Texture = PlatformTexture;
-                    Tiles[170, 5].IsBlocked = true;
-                    Tiles[170, 5].Texture = PlatformTexture;
-                    Tiles[175, 5].IsBlocked = true;
-                    Tiles[175, 5].Texture = PlatformTexture;
-                    Tiles[180, 5].IsBlocked = true;
-                    Tiles[180, 5].Texture = PlatformTexture;
-                    //Tiles[185, 4].IsBlocked = true;
-                    //Tiles[185, 4].Texture = PlatformTexture;
-                    //Tiles[194, 5].IsBlocked = true;
-                    //Tiles[194, 5].Texture = PlatformTexture;
-                    //Tiles[191, 8].IsBlocked = true;
-                    //Tiles[193, 11].IsBlocked = true;
-                    //Tiles[193, 11].Texture = PlatformTexture;
-                    Tiles[187, 6].IsBlocked = true;
-                    Tiles[191, 8].IsBlocked = true;
-                    Tiles[195, 10].IsBlocked = true;
-                    Tiles[199, 12].IsBlocked = true;
-                    Tiles[202, 14].IsBlocked = true;
-                    Tiles[206, 16].IsBlocked = true;
-                    Tiles[206, 16].Texture = PlatformTexture;
-            }
+            
             if (level == 1)
             {
                 //-------------------------------------------------Screen 1----------------------------------------------------------------
@@ -264,10 +175,10 @@ namespace BustinOutMegaMan
                 Tiles[26, 13].Texture = SpikesLeftTexture;
                 Tiles[39, 13].IsBlocked = true;
                 Tiles[39, 13].Texture = SpikesRightTexture;
-                Tiles[38, 12].IsBlocked = true;
-                Tiles[38, 12].Texture = SpikesUpTexture;
-                Tiles[27, 12].IsBlocked = true;
-                Tiles[27, 12].Texture = SpikesUpTexture;
+                Tiles[38, 13].IsBlocked = true;
+                Tiles[38, 13].Texture = SpikesUpTexture;
+                Tiles[27, 13].IsBlocked = true;
+                Tiles[27, 13].Texture = SpikesUpTexture;
                 
                 Tiles[28, 14].IsBlocked = true;
                 Tiles[28, 14].Texture = SpikesDownTexture;
@@ -347,24 +258,117 @@ namespace BustinOutMegaMan
                 Tiles[155, 5].IsBlocked = true;
                 Tiles[155, 5].Texture = PlatformTexture;
 
-                Tiles[115, 18].IsBlocked = true;
-                Tiles[115, 18].Texture = SpikesUpTexture;
-                Tiles[120, 18].IsBlocked = true;
-                Tiles[120, 18].Texture = SpikesUpTexture;
-                Tiles[125, 18].IsBlocked = true;
-                Tiles[125, 18].Texture = SpikesUpTexture;
-                Tiles[130, 18].IsBlocked = true;
-                Tiles[130, 18].Texture = SpikesUpTexture;
-                Tiles[135, 18].IsBlocked = true;
-                Tiles[135, 18].Texture = SpikesUpTexture;
-                Tiles[140, 18].IsBlocked = true;
-                Tiles[140, 18].Texture = SpikesUpTexture;
-                Tiles[145, 18].IsBlocked = true;
-                Tiles[145, 18].Texture = SpikesUpTexture;
-                Tiles[150, 18].IsBlocked = true;
-                Tiles[150, 18].Texture = SpikesUpTexture;
-                Tiles[155, 18].IsBlocked = true;
-                Tiles[155, 18].Texture = SpikesUpTexture;
+                Tiles[115, 19].IsBlocked = true;
+                Tiles[115, 19].Texture = SpikesUpTexture;
+                Tiles[120, 19].IsBlocked = true;
+                Tiles[120, 19].Texture = SpikesUpTexture;
+                Tiles[125, 19].IsBlocked = true;
+                Tiles[125, 19].Texture = SpikesUpTexture;
+                Tiles[130, 19].IsBlocked = true;
+                Tiles[130, 19].Texture = SpikesUpTexture;
+                Tiles[135, 19].IsBlocked = true;
+                Tiles[135, 19].Texture = SpikesUpTexture;
+                Tiles[140, 19].IsBlocked = true;
+                Tiles[140, 19].Texture = SpikesUpTexture;
+                Tiles[145, 19].IsBlocked = true;
+                Tiles[145, 19].Texture = SpikesUpTexture;
+                Tiles[150, 19].IsBlocked = true;
+                Tiles[150, 19].Texture = SpikesUpTexture;
+                Tiles[155, 19].IsBlocked = true;
+                Tiles[155, 19].Texture = SpikesUpTexture;
+
+                //---------------------------------------------Boss Screen------------------------------------------------------------------
+                //---------------------------------------------~155<X<205-------------------------------------------------------------------
+
+                Tiles[160, 5].IsBlocked = true;
+                Tiles[160, 5].Texture = PlatformTexture;
+                Tiles[165, 5].IsBlocked = true;
+                Tiles[165, 5].Texture = PlatformTexture;
+                Tiles[170, 5].IsBlocked = true;
+                Tiles[170, 5].Texture = PlatformTexture;
+                Tiles[175, 5].IsBlocked = true;
+                Tiles[175, 5].Texture = PlatformTexture;
+                Tiles[180, 5].IsBlocked = true;
+                Tiles[180, 5].Texture = PlatformTexture;
+                //Tiles[185, 4].IsBlocked = true;
+                //Tiles[185, 4].Texture = PlatformTexture;
+                //Tiles[194, 5].IsBlocked = true;
+                //Tiles[194, 5].Texture = PlatformTexture;
+                //Tiles[191, 8].IsBlocked = true;
+                //Tiles[193, 11].IsBlocked = true;
+                //Tiles[193, 11].Texture = PlatformTexture;
+                Tiles[187, 6].IsBlocked = true;
+                Tiles[191, 8].IsBlocked = true;
+                Tiles[195, 10].IsBlocked = true;
+                Tiles[199, 12].IsBlocked = true;
+                Tiles[202, 14].IsBlocked = true;
+                Tiles[206, 16].IsBlocked = true;
+                Tiles[206, 16].Texture = PlatformTexture;
+            }
+
+            if (level == 2)
+            {
+                //-------------------------------------------------Screen 1----------------------------------------------------------------
+                //-------------------------------------------------0<X<~48-------------------------------------------------------------------                
+
+
+                Tiles[5, 5].IsBlocked = true;
+                Tiles[5, 5].Texture = BlockTexture;
+                Tiles[10, 5].IsBlocked = true;
+                Tiles[10, 5].Texture = BlockTexture;
+                Tiles[15, 8].IsBlocked = true;
+                Tiles[15, 8].Texture = BlockTexture;
+                Tiles[20, 5].IsBlocked = true;
+                Tiles[20, 5].Texture = BlockTexture;
+                Tiles[25, 5].IsBlocked = true;
+                Tiles[25, 5].Texture = BlockTexture;
+                Tiles[30, 5].IsBlocked = true;
+                Tiles[30, 5].Texture = BlockTexture;
+                Tiles[35, 8].IsBlocked = true;
+                Tiles[35, 8].Texture = BlockTexture;
+                Tiles[40, 5].IsBlocked = true;
+                Tiles[40, 5].Texture = BlockTexture;
+                Tiles[45, 8].IsBlocked = true;
+                Tiles[45, 8].Texture = BlockTexture;
+                Tiles[50, 5].IsBlocked = true;
+                Tiles[50, 5].Texture = BlockTexture;
+
+
+                Tiles[26, 13].IsBlocked = true;
+                Tiles[26, 13].Texture = BlockTexture;
+                Tiles[39, 13].IsBlocked = true;
+                Tiles[39, 13].Texture = BlockTexture;
+                Tiles[38, 12].IsBlocked = true;
+
+
+                //-----------------------------------------------Screen 2--------------------------------------------------------------------
+                //-----------------------------------------------~48<X<~102----------------------------------------------------------------------
+                Tiles[55, 5].IsBlocked = true;
+                Tiles[55, 5].Texture = BlockTexture;
+                Tiles[60, 5].IsBlocked = true;
+                Tiles[60, 5].Texture = BlockTexture;
+                Tiles[65, 5].IsBlocked = true;
+                Tiles[65, 5].Texture = BlockTexture;
+                Tiles[70, 5].IsBlocked = true;
+                Tiles[70, 5].Texture = BlockTexture;
+                Tiles[75, 5].IsBlocked = true;
+                Tiles[75, 5].Texture = BlockTexture;
+                Tiles[80, 5].IsBlocked = true;
+                Tiles[80, 5].Texture = BlockTexture;
+                Tiles[85, 5].IsBlocked = true;
+                Tiles[85, 5].Texture = BlockTexture;
+                Tiles[90, 5].IsBlocked = true;
+                Tiles[90, 5].Texture = BlockTexture;
+                Tiles[95, 5].IsBlocked = true;
+                Tiles[95, 5].Texture = BlockTexture;
+                Tiles[100, 5].IsBlocked = true;
+                Tiles[100, 5].Texture = BlockTexture;
+
+                //-----------------------------------------------Screen 3--------------------------------------------------------------------
+                //-----------------------------------------------102<X<154-------------------------------------------------------------------
+
+
+
 
                 //---------------------------------------------Boss Screen------------------------------------------------------------------
                 //---------------------------------------------~155<X<205-------------------------------------------------------------------
@@ -417,6 +421,17 @@ namespace BustinOutMegaMan
             return false;
         }
 
+        public void ShowPowerUp(Rectangle rectangleToCheck)
+        {
+            foreach (var tile in Board.CurrentBoard.Tiles)
+            {
+                if (tile.Texture == BlockTexture &&
+                    new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width, // creates a rectangle based off of the tile to check if it collides
+                        (int)tile.Texture.Height).Intersects(rectangleToCheck))
+                    tile.Texture = PowerUpTexture;
+            }
+        }
+
         public bool HasRoomForRectangle(Rectangle rectangleToCheck)
         {
             foreach (var tile in Tiles)
@@ -429,7 +444,7 @@ namespace BustinOutMegaMan
             return true;
         }
 
-        public bool bumpedIntoBlock(Rectangle rectangleToCheck)
+        public bool BumpedIntoBlock(Rectangle rectangleToCheck)
         {
             foreach (var tile in Tiles)
             {

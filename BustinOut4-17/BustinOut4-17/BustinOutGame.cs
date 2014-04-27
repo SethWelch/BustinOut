@@ -22,7 +22,7 @@ namespace BustinOutMegaMan
         public SpriteBatch spriteBatch;
         public static TimeSpan timeRemaining = TimeSpan.FromMinutes(20.0);
         private Texture2D tileTexture1, tileTexture2, blockTexture, platformTexture, megamanTexture, bowser,
-            spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons, bowserText, bowserText2;
+            spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, quarterTexture, viewButtons, bowserText, bowserText2;
         private static Texture2D ui, prison1, prison2, prison3, prisonBoss, black, stairs, mb1, mb2, mb3, mb4, pong;
         public static AnimatedSprite megaman;
         public static bool soundBool = true, screenChange = false, wonPong = false;
@@ -154,6 +154,7 @@ namespace BustinOutMegaMan
             spikesDownTexture = Content.Load<Texture2D>("Images/Objects/Spikes Down");
             spikesLeftTexture = Content.Load<Texture2D>("Images/Objects/Spikes Left");
             spikesRightTexture = Content.Load<Texture2D>("Images/Objects/Spikes Right");
+            quarterTexture = Content.Load<Texture2D>("Images/Objects/quarter");
             bowser = Content.Load<Texture2D>("Images/bowser2");
             bowserText = Content.Load<Texture2D>("Images/bowserText");
             bowserText2 = Content.Load<Texture2D>("Images/bowserText2");
@@ -167,8 +168,8 @@ namespace BustinOutMegaMan
             megaman = new AnimatedSprite(megamanTexture, 0, 60, 50);
 
             //create the levels
-            board1 = new Board(1, spriteBatch, tileTexture1, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, 212, 20);
-            board2 = new Board(2, spriteBatch, tileTexture2, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, 212, 20);
+            board1 = new Board(1, spriteBatch, tileTexture1, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, quarterTexture, 212, 20);
+            board2 = new Board(2, spriteBatch, tileTexture2, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, quarterTexture, 212, 20);
 
             //Set where player starts
             megaman.Position = new Vector2(100, 655);
@@ -325,7 +326,7 @@ namespace BustinOutMegaMan
                 case GameState.Pause:
                     {
                         pause.Draw(spriteBatch, yCorrect, this.Window.ClientBounds.Width, this.Window.ClientBounds.Height - (yCorrect * 2));
-
+                        DrawHud();
                         break;
                     }
                 case GameState.Difficulty:
