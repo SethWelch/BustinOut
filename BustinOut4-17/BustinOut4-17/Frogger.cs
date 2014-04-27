@@ -26,13 +26,13 @@ namespace BustinOutMegaMan
     {
         Texture2D mLeft, mRight, mman, background, background2, background3, block, block2, truck, truck2, truck3, truck4, car1, car2, light, light1, light2;
         Rectangle playerrectangle;
-        int posX = 7, posY = 0, xMax = 19, yMax = 13, counter = 0, edge = 400, lightning = 1, lightY = 8, set = 0, point = 0, froggerState = 0;
+        int posX = 7, posY = 0, xMax = 19, yMax = 13, counter = 0, edge = 400, lightning = 1, lightY = 8, set = 0, point = 0, froggerState = 0, winning = 5;
         static Vector2 originalPos = new Vector2(570, 845);
         Vector2 playerPos = originalPos;
         Vector2 truckPos = new Vector2(-400, 785), truckPos2 = new Vector2(2000, 555), truckPos3 = new Vector2(-400, 675), truckPos4 = new Vector2(2000, 615);
         Vector2 carPos1 = new Vector2(-400, 500), carPos2 = new Vector2(2000, 725);
         Vector2 lightPos1 = new Vector2(0, 385), lightPos2 = new Vector2(0, 325), lightPos3 = new Vector2(0, 270), lightPos4 = new Vector2(0, 215);
-        Vector2 lightPos5 = new Vector2(0, 160), timerPos = new Vector2(700, 0), deathPos = new Vector2(1300, 0);
+        Vector2 lightPos5 = new Vector2(0, 160), timerPos = new Vector2(700, 0), deathPos = new Vector2(1200, 0);
         String time = "20:00";
 
         public List<Projectiles> trucks, trucks2, blocks, score, cars;
@@ -102,6 +102,12 @@ namespace BustinOutMegaMan
             {
                 //create this rectangle in update since the x and y will change
                 playerrectangle = new Rectangle((int)playerPos.X, (int)playerPos.Y, mLeft.Width, mLeft.Height);
+
+                //checks if player won
+                if (point == winning)
+                {
+                    froggerState = 2;
+                }
 
                 //If the player wants to move up
                 if (ctrl.Up())
@@ -344,10 +350,11 @@ namespace BustinOutMegaMan
                 {
                     BustinOutGame.wonFrogger = true;
                     BustinOutGame.setState(4, 0);
+
+                    froggerState = 0;
+                    score.Clear();
+                    point = 0;
                 }
-                froggerState = 0;
-                score.Clear();
-                point = 0;
             }
         }
 

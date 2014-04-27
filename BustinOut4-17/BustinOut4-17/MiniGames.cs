@@ -10,11 +10,9 @@ namespace BustinOutMegaMan
     class MiniGames
     {
         private static Texture2D arrow, miniGameScreen;
-        private static Vector2 arrowPosition = new Vector2(170, 430);
-        private static Vector2 arrowPosition2 = new Vector2(170, 490);
-        private static Vector2 arrowPosition3 = new Vector2(200, 545);
-        private static Vector2 arrowPosition4 = new Vector2(170, 600);
-        private static Vector2 arrowPosition5 = new Vector2(170, 660);
+        private static Vector2 arrowPosition = new Vector2(150, 545);
+        private static Vector2 arrowPosition2 = new Vector2(150, 600);
+        private static Vector2 arrowPosition3 = new Vector2(150, 660);
         private static Vector2 position = arrowPosition;
         private static int option = 0, fromTitle = 0;
 
@@ -47,14 +45,6 @@ namespace BustinOutMegaMan
                 {
                     BustinOutGame.setState(9, 0);
                 }
-                else if (option == 2)
-                {
-
-                }
-                else if (option == 3)
-                {
-                    
-                }
                 else
                 {
                     BustinOutGame.setState(1, 1);
@@ -72,7 +62,7 @@ namespace BustinOutMegaMan
             {
                 if (option == 0)
                 {
-                    option = 4;
+                    option = 2;
                 }
                 else
                 {
@@ -84,7 +74,7 @@ namespace BustinOutMegaMan
 
             if (ctrl.Down())
             {
-                if (option == 4)
+                if (option == 2)
                 {
                     option = 0;
                 }
@@ -107,17 +97,9 @@ namespace BustinOutMegaMan
             {
                 position = arrowPosition2;
             }
-            else if (option == 2)
-            {
-                position = arrowPosition3;
-            }
-            else if (option == 3)
-            {
-                position = arrowPosition4;
-            }
             else
             {
-                position = arrowPosition5;
+                position = arrowPosition3;
             }
         }
 

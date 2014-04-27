@@ -178,6 +178,7 @@ namespace BustinOutMegaMan
                 {
                     playertwo.ySpeed = negPaddleSpeed;
                 }
+
             }
             if (pongState == 2)
             {
@@ -185,9 +186,9 @@ namespace BustinOutMegaMan
                 {
                     BustinOutGame.wonPong = true;
                     BustinOutGame.setState(4, 0);
+                    pongState = 0;
+                    Reset();
                 }
-                pongState = 0;
-                Reset();
             }
         }
 
