@@ -27,12 +27,12 @@ namespace BustinOutMegaMan
             spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, viewButtons, bowserText, bowserText2;
         private static Texture2D ui, prison1, prison2, prison3, prisonBoss, black, stairs, mb1, mb2, mb3, mb4, pong;
         public static AnimatedSprite megaman;
-        public static bool soundBool = true, screenChange = false, wonPong = false;
+        public static bool soundBool = true, screenChange = false, wonPong = false, wonFrogger = false;
         private Board board1, board2;
         private Random rnd = new Random();
         private SpriteFont debugFont;
         private static int bgNum = 0, yCorrect = 165, level = 1, height = 900, width = 1600, currentGameState = 0;
-        public static int interact = 0;
+        public static int interact = 0, deathCounter = 0;
         private static bool debugBool = false, hasQuarter = false;
         private KeyboardState currentState, previousState;
         private static String timeString;
@@ -42,6 +42,10 @@ namespace BustinOutMegaMan
         static SoundEffect arrowSound, arrowSelect, arrowBack;
         static SoundEffectInstance arrowSoundInstance, arrowSelectInstance, arrowBackInstance;
         float volume = .15f;
+
+        //for intro video
+        Video intro, ending;
+        VideoPlayer vidplayer = new VideoPlayer();
 
         public static int screenHeight
         {
@@ -85,6 +89,8 @@ namespace BustinOutMegaMan
         //sets all of the different game states
         private enum GameState
         {
+            Intro,
+            Ending,
             Title,
             Playing,
             Hall,
@@ -100,7 +106,7 @@ namespace BustinOutMegaMan
             Difficulty
         }
 
-        private static GameState mCurrentState = GameState.Title;
+        private static GameState mCurrentState = GameState.Intro;
 
         public BustinOutGame()
         {
@@ -113,6 +119,10 @@ namespace BustinOutMegaMan
 
         protected override void LoadContent()
         {
+            //Load content for video
+            intro = Content.Load<Video>("Intro");
+            ending = Content.Load<Video>("Ending");
+
             //Load Content for all of the different screens
             titleScreen.LoadContent(Content);
             hallOfFame.LoadContent(Content);
@@ -282,6 +292,18 @@ namespace BustinOutMegaMan
 
             switch (mCurrentState)
             {
+                case GameState.Intro:
+                    {
+                        spriteBatch.Draw(vidplayer.GetTexture(), new Rectangle(150, 100, intro.Width, intro.Height), Color.White);
+
+                        break;
+                    }
+                case GameState.Ending:
+                    {
+                        spriteBatch.Draw(vidplayer.GetTexture(), new Rectangle(150, 100, intro.Width, intro.Height), Color.White);
+
+                        break;
+                    }
                 case GameState.Title:
                     {
                         titleScreen.Draw(spriteBatch, yCorrect, this.Window.ClientBounds.Width, this.Window.ClientBounds.Height - (yCorrect * 2));
@@ -350,7 +372,7 @@ namespace BustinOutMegaMan
                     }
                 case GameState.Frogger:
                     {
-                        frog.Draw(spriteBatch, timeRemaining);
+                        frog.Draw(spriteBatch, timeRemaining, yCorrect, this.Window.ClientBounds.Width, this.Window.ClientBounds.Height - (yCorrect * 2));
 
                         break;
                     }
@@ -490,6 +512,36 @@ namespace BustinOutMegaMan
             //The switch statement will handle what screen the user sees
             switch (mCurrentState)
             {
+                case GameState.Intro:
+                    {
+                        MediaPlayer.Pause();
+
+                        vidplayer.Play(intro);
+
+                        if (vidplayer.PlayPosition.Seconds == intro.Duration.Seconds || ctrl.Select())
+                        {
+                            vidplayer.Stop();
+                            MediaPlayer.Resume();
+                            setState(1,0);
+                        }
+
+                        break;
+                    }
+                case GameState.Ending:
+                    {
+                        MediaPlayer.Pause();
+
+                        vidplayer.Play(ending);
+
+                        if (vidplayer.PlayPosition.Seconds == ending.Duration.Seconds || ctrl.Select())
+                        {
+                            vidplayer.Stop();
+                            MediaPlayer.Resume();
+                            setState(1, 0);
+                        }
+
+                        break;
+                    }
                 case GameState.Title:
                     {
                         titleScreen.Update(gameTime);
@@ -780,10 +832,15 @@ namespace BustinOutMegaMan
                 mCurrentState = GameState.Show;
                 currentGameState = 12;
             }
-            else
+            else if (state == 13)
             {
                 mCurrentState = GameState.Difficulty;
                 currentGameState = 13;
+            }
+            else
+            {
+                mCurrentState = GameState.Intro;
+                currentGameState = 14;
             }
         }
 

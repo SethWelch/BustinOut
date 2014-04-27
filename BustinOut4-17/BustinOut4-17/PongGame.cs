@@ -20,7 +20,7 @@ namespace BustinOutMegaMan
         Paddle playerone, playertwo;
         Rectangle playerrectangle, computerrectangle, ballrectangle;
         int posSpeed = 16, negSpeed = -16, posPaddleSpeed = 16, negPaddleSpeed = -16, ballSpeed = 17, p1Score = 0, p2Score = 0, direction = 1, 
-            height, width, winning = 1, pongState = 0;
+            height, width, winning = 5, pongState = 0;
         Point start = new Point(800, 450);
         String p1 = "MegaMan", p2 = "Bowser", time = "20:00";
         SpriteFont font, font2;
@@ -186,6 +186,8 @@ namespace BustinOutMegaMan
                     BustinOutGame.wonPong = true;
                     BustinOutGame.setState(4, 0);
                 }
+                pongState = 0;
+                Reset();
             }
         }
 
