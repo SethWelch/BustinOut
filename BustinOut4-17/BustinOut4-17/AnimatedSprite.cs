@@ -20,7 +20,7 @@ namespace BustinOutMegaMan
         Rectangle sourceRect;
         Vector2 position, origin;
         bool jumping, running; 
-        public bool isAlive = true;
+        public bool isAlive = true, hasQuarter = false;
         public static bool shooting = false, controlsOn = true;
 
         //for megaman
@@ -55,6 +55,7 @@ namespace BustinOutMegaMan
                 WrapAcrossScreenIfNeeded();
                 HandleSpriteMovement(gameTime);
                 CheckForBlockHit(gameTime);
+                CheckForQuarterCollect();
             }
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
             mman = new Rectangle((int)BustinOutGame.megaman.Position.X, (int)BustinOutGame.megaman.Position.Y, (int)BustinOutGame.megaman.spriteWidth, BustinOutGame.megaman.spriteHeight);
@@ -290,7 +291,7 @@ namespace BustinOutMegaMan
         private void UpdatePositionBasedOnMovement(GameTime gameTime)
         {
             //player position
-               Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
+            Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
         }
 
         //checks if the character is on the ground, used to check if they can jump
@@ -448,8 +449,33 @@ namespace BustinOutMegaMan
             {
                 MegaManExplode(gameTime);
             }
+
+            //checks for quarter
+            if (Board.CurrentBoard.CollectQuarter(onePixelHigher))
+            {
+                hasQuarter = true;
+            }
+
+            //checks for quarter
+            if (Board.CurrentBoard.CollectQuarter(onePixelLower))
+            {
+                hasQuarter = true;
+            }
+
+            //checks for quarter
+            if (Board.CurrentBoard.CollectQuarter(onePixelLeft))
+            {
+                hasQuarter = true;
+            }
+
+            //checks for quarter
+            if (Board.CurrentBoard.CollectQuarter(onePixelRight))
+            {
+                hasQuarter = true;
+            }
         }
 
+        //checks if player jumps into a powerUp block and then calls on Board to show it
         private void CheckForBlockHit(GameTime gameTime)
         {
             Rectangle onePixelHigher = mman;  
@@ -457,6 +483,11 @@ namespace BustinOutMegaMan
 
             Board.CurrentBoard.ShowPowerUp(onePixelHigher);
         }
+
+        public void CheckForQuarterCollect(){
+
+
+            }
 
         public Vector2 Position
         {

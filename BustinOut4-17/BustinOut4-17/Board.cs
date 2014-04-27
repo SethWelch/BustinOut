@@ -57,21 +57,9 @@ namespace BustinOutMegaMan
 
         public void Update(GameTime gameTime)
         {
-            CheckKeyboardAndUpdateMovement();
+            
         }
 
-        private void CheckKeyboardAndUpdateMovement()
-        {
-            KeyboardState keyboardState = Keyboard.GetState();
-
-            if (keyboardState.IsKeyDown(Keys.Left)) { Movement -= Vector2.UnitX * .5f; }
-            if (keyboardState.IsKeyDown(Keys.Right)) { Movement += Vector2.UnitX * 0.5f; }
-        }
-
-        private void UpdatePositionBasedOnMovement(GameTime gameTime)
-        {
-            Position += Movement * (float)gameTime.ElapsedGameTime.TotalMilliseconds / 15;
-        }
 
         public void CreateNewBoard()
         {
@@ -170,30 +158,19 @@ namespace BustinOutMegaMan
                 Tiles[10, 3].Texture = TileTexture;
                 Tiles[10, 4].IsBlocked = true;
                 Tiles[10, 4].Texture = TileTexture;
-
-                Tiles[26, 13].IsBlocked = true;
-                Tiles[26, 13].Texture = SpikesLeftTexture;
-                Tiles[39, 13].IsBlocked = true;
-                Tiles[39, 13].Texture = SpikesRightTexture;
-                Tiles[38, 13].IsBlocked = true;
-                Tiles[38, 13].Texture = SpikesUpTexture;
-                Tiles[27, 13].IsBlocked = true;
-                Tiles[27, 13].Texture = SpikesUpTexture;
-                
-                Tiles[28, 14].IsBlocked = true;
-                Tiles[28, 14].Texture = SpikesDownTexture;
-                //Tiles[29, 14].IsBlocked = true;
-                //Tiles[29, 14].Texture = SpikesDownTexture;
-                Tiles[35, 14].IsBlocked = true;
-                Tiles[35, 14].Texture = SpikesDownTexture;
-                Tiles[36, 14].IsBlocked = true;
-                Tiles[36, 14].Texture = SpikesDownTexture;
-                Tiles[32, 12].IsBlocked = true;
-                Tiles[32, 12].Texture = BlockTexture;
-                Tiles[26, 13].IsBlocked = true;
-                Tiles[26, 13].Texture = PlatformTexture;
-                Tiles[34, 13].IsBlocked = true;
-                Tiles[34, 13].Texture = PlatformTexture;
+  
+                Tiles[21, 13].IsBlocked = true;
+                Tiles[21, 13].Texture = BlockTexture;
+                Tiles[11, 13].IsBlocked = true;
+                Tiles[11, 13].Texture = PlatformTexture;
+                Tiles[16, 13].IsBlocked = true;
+                Tiles[16, 13].Texture = PlatformTexture;
+                Tiles[23, 13].IsBlocked = true;
+                Tiles[23, 13].Texture = PlatformTexture;
+                Tiles[28, 13].IsBlocked = true;
+                Tiles[28, 13].Texture = PlatformTexture;
+                Tiles[33, 13].IsBlocked = true;
+                Tiles[33, 13].Texture = PlatformTexture;
 
                 //-----------------------------------------------Screen 2--------------------------------------------------------------------
                 //-----------------------------------------------~48<X<~102----------------------------------------------------------------------
@@ -421,14 +398,39 @@ namespace BustinOutMegaMan
             return false;
         }
 
+        public bool CollectQuarter(Rectangle rectangleToCheck)
+        {
+            for (int x = 0; x < Columns; x++)
+            {
+                for (int y = 0; y < Rows; y++)
+                {
+                    if (Tiles[x, y].Texture == PowerUpTexture &&
+                     new Rectangle((int)Tiles[x, y].Position.X, (int)Tiles[x, y].Position.Y, (int)Tiles[x, y].Texture.Width, // creates a rectangle based off of the tile to check if it collides
+                         (int)Tiles[x, y].Texture.Height).Intersects(rectangleToCheck))
+                    {
+                        Tiles[x, y ].IsBlocked = false;
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        //shows the powerUpTexture when the player jumps into the PowerUp block
         public void ShowPowerUp(Rectangle rectangleToCheck)
         {
-            foreach (var tile in Board.CurrentBoard.Tiles)
+            for (int x = 0; x < Columns; x++)
             {
-                if (tile.Texture == BlockTexture &&
-                    new Rectangle((int)tile.Position.X, (int)tile.Position.Y, (int)tile.Texture.Width, // creates a rectangle based off of the tile to check if it collides
-                        (int)tile.Texture.Height).Intersects(rectangleToCheck))
-                    tile.Texture = PowerUpTexture;
+                for (int y = 0; y < Rows; y++)
+                {
+                    if (Tiles[x, y].Texture == BlockTexture &&
+                     new Rectangle((int)Tiles[x, y].Position.X, (int)Tiles[x, y].Position.Y, (int)Tiles[x, y].Texture.Width, // creates a rectangle based off of the tile to check if it collides
+                         (int)Tiles[x, y].Texture.Height).Intersects(rectangleToCheck))
+                    {
+                        Tiles[x, y - 1].IsBlocked = true;
+                        Tiles[x, y - 1].Texture = PowerUpTexture;
+                    }
+                }
             }
         }
 

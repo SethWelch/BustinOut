@@ -31,7 +31,7 @@ namespace BustinOutMegaMan
         private SpriteFont debugFont;
         private static int bgNum = 0, yCorrect = 165, level = 1, height = 900, width = 1600, currentGameState = 0;
         public static int interact = 0;
-        private static bool debugBool = false, hasQuarter = false;
+        private static bool debugBool = false;// hasQuarter = false;
         private KeyboardState currentState, previousState;
         private static String timeString;
         Rectangle source;
@@ -168,8 +168,8 @@ namespace BustinOutMegaMan
             megaman = new AnimatedSprite(megamanTexture, 0, 60, 50);
 
             //create the levels
-            board1 = new Board(1, spriteBatch, tileTexture1, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, quarterTexture, 212, 20);
-            board2 = new Board(2, spriteBatch, tileTexture2, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, quarterTexture, 212, 20);
+            board1 = new Board(1, spriteBatch, tileTexture1, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, quarterTexture, 380, 20);
+            board2 = new Board(2, spriteBatch, tileTexture2, blockTexture, platformTexture, spikesUpTexture, spikesDownTexture, spikesLeftTexture, spikesRightTexture, quarterTexture, 380, 20);
 
             //Set where player starts
             megaman.Position = new Vector2(100, 655);
@@ -376,9 +376,9 @@ namespace BustinOutMegaMan
                         DrawHud();
 
                         //---------------------Adding Bowser-----------------------//
-                        if (bgNum == 3 && level == 1)
+                        if (bgNum == 6 && level == 1)
                         {
-                            if (hasQuarter == true)
+                            if (megaman.hasQuarter == true)
                             {
                                 //bowser sees that the player has a quarter and challenges him
                                 trigger(2);
@@ -409,7 +409,7 @@ namespace BustinOutMegaMan
                                 //Debug to set player as having a quarter
                                 if (ctrl.jump())
                                 {
-                                    hasQuarter = true;
+                                    megaman.hasQuarter = true;
                                 }
                             }
                         }
@@ -682,6 +682,18 @@ namespace BustinOutMegaMan
                 {
                     return prison3;
                 }
+                else if (bgNum == 3)
+                {
+                    return prison1;
+                }
+                else if (bgNum == 4)
+                {
+                    return prison2;
+                }
+                else if (bgNum == 5)
+                {
+                    return prison3;
+                }
                 else
                 {
                     return prisonBoss;
@@ -840,7 +852,7 @@ namespace BustinOutMegaMan
 
         private static void resetVariables()
         {
-            hasQuarter = false;
+            megaman.hasQuarter = false;
             screenChange = false;
             interact = 0;
             LiveProjectiles.Clear();
